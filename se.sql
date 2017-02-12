@@ -3,6 +3,9 @@ set lin 200;
 set pause on;
 
 col name format a10;
+col Name format a10;
+col Table_Name format a28;
+col Tame format a10;
 col day format a12;
 col out_time format a20;
 col Outtime format a20;

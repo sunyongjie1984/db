@@ -1,0 +1,50 @@
+08:45:08 SQL> select ename, job, sal from scott.emp;
+
+ENAME      JOB                    SAL                                           
+---------- --------- ----------------                                           
+SMITH      CLERK              $800.00                                           
+ALLEN      SALESMAN         $1,600.00                                           
+WARD       SALESMAN         $1,250.00                                           
+JONES      MANAGER          $2,975.00                                           
+MARTIN     SALESMAN         $1,250.00                                           
+BLAKE      MANAGER          $2,850.00                                           
+CLARK      MANAGER          $2,450.00                                           
+SCOTT      ANALYST          $3,000.00                                           
+KING       PRESIDENT        $5,000.00                                           
+TURNER     SALESMAN         $1,500.00                                           
+ADAMS      CLERK            $1,100.00                                           
+
+ENAME      JOB                    SAL                                           
+---------- --------- ----------------                                           
+JAMES      CLERK              $950.00                                           
+FORD       ANALYST          $3,000.00                                           
+MILLER     CLERK            $1,300.00                                           
+
+14 rows selected.
+
+08:46:32 SQL> set numformat $999,999,999.00;
+08:46:37 SQL> select ename, job, sal from scott.emp;
+
+ENAME      JOB                    SAL                                           
+---------- --------- ----------------                                           
+SMITH      CLERK              $800.00                                           
+ALLEN      SALESMAN         $1,600.00                                           
+WARD       SALESMAN         $1,250.00                                           
+JONES      MANAGER          $2,975.00                                           
+MARTIN     SALESMAN         $1,250.00                                           
+BLAKE      MANAGER          $2,850.00                                           
+CLARK      MANAGER          $2,450.00                                           
+SCOTT      ANALYST          $3,000.00                                           
+KING       PRESIDENT        $5,000.00                                           
+TURNER     SALESMAN         $1,500.00                                           
+ADAMS      CLERK            $1,100.00                                           
+
+ENAME      JOB                    SAL                                           
+---------- --------- ----------------                                           
+JAMES      CLERK              $950.00                                           
+FORD       ANALYST          $3,000.00                                           
+MILLER     CLERK            $1,300.00                                           
+
+14 rows selected.
+
+08:46:39 SQL> spool off;

@@ -9,7 +9,7 @@ begin
     dbms_output.put_line(to_char(sysdate)); -- date variable
 
     -- Use || for concatenation:
-    dbms_output.put_line('Value of a:'||to_char(a));
+    dbms_output.put_line('Value of a:' || to_char(a));
     -- Shows current date including seconds:
     dbms_output.put_line(to_char(sysdate, 'dd-mon-yy hh:mi:ss'));
 end;

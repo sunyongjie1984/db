@@ -1,0 +1,11 @@
+SQL> select em2.ename 上层管理者, em1.ename as 下属员工
+  2  from emp em1 left join emp em2
+  3  on em1.mgr = em2.empno
+  4  order by em1.mgr;
+select em2.ename 上层管理者, em1.ename as 下属员工
+                 *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> spool off;

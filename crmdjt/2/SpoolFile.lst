@@ -1,0 +1,1860 @@
+SQL> clear buffer;
+buffer cleared
+SQL> columne
+SP2-0042: unknown command "columne" - rest of line ignored.
+SQL> column
+COLUMN   NAME_COL_PLUS_SHOW_EDITION ON
+HEADING  'EDITION'
+FORMAT   a30
+word_wrap 
+
+COLUMN   result_plus_xquery ON
+HEADING  'Result Sequence'
+
+COLUMN   other_plus_exp ON
+FORMAT   a44
+
+COLUMN   other_tag_plus_exp ON
+FORMAT   a29
+
+COLUMN   object_node_plus_exp ON
+FORMAT   a8
+
+COLUMN   plan_plus_exp ON
+FORMAT   a60
+
+COLUMN   parent_id_plus_exp ON
+HEADING  'p'
+FORMAT   990
+
+COLUMN   id_plus_exp ON
+HEADING  'i'
+FORMAT   990
+
+COLUMN   droptime_plus_show_recyc ON
+HEADING  'DROP TIME'
+FORMAT   a19
+
+COLUMN   objtype_plus_show_recyc ON
+HEADING  'OBJECT TYPE'
+FORMAT   a12
+
+COLUMN   objectname_plus_show_recyc ON
+HEADING  'RECYCLEBIN NAME'
+FORMAT   a30
+
+COLUMN   origname_plus_show_recyc ON
+HEADING  'ORIGINAL NAME'
+FORMAT   a16
+
+COLUMN   SID_COL_PLUS_SHOW_SPPARAM ON
+HEADING  'SID'
+FORMAT   a8
+word_wrap 
+
+COLUMN   VALUE_COL_PLUS_SHOW_SPPARAM ON
+HEADING  'VALUE'
+FORMAT   a28
+word_wrap 
+
+COLUMN   NAME_COL_PLUS_SHOW_SPPARAM ON
+HEADING  'NAME'
+FORMAT   a29
+word_wrap 
+
+COLUMN   value_col_plus_show_param ON
+HEADING  'VALUE'
+FORMAT   a30
+
+COLUMN   name_col_plus_show_param ON
+HEADING  'NAME'
+FORMAT   a36
+
+COLUMN   units_col_plus_show_sga ON
+FORMAT   a15
+
+COLUMN   name_col_plus_show_sga ON
+FORMAT   a24
+
+COLUMN   ERROR ON
+FORMAT   A65
+word_wrap 
+
+COLUMN   LINE/COL ON
+FORMAT   A8
+
+COLUMN   ROWLABEL ON
+FORMAT   A15
+SQL> shuw user
+SP2-0042: unknown command "shuw user" - rest of line ignored.
+SQL> show user
+USER is "SYS"
+SQL> select * from scott.emp
+  2  ;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> line a100
+SP2-0042: unknown command "line a100" - rest of line ignored.
+SQL> set line 100
+SQL> select * from scott.emp
+  2  ;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20               
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30               
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30               
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20               
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30               
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30               
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10               
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20               
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10               
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30               
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20               
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30               
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20               
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10               
+
+14 rows selected.
+
+SQL> col empno ‘编号'
+SP2-0158: unknown COLUMN option "‘编号'"
+SQL> col empno 编号
+SP2-0158: unknown COLUMN option "编号"
+SQL> col empno headling 编号
+SP2-0158: unknown COLUMN option "headling"
+SQL> col empno heading 编号
+SQL> select * from scott.emp;
+
+    编号 ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20               
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30               
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30               
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20               
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30               
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30               
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10               
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20               
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10               
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30               
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20               
+
+    编号 ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30               
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20               
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10               
+
+14 rows selected.
+
+SQL> disconn
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+SQL> conn scott/tiger
+ERROR:
+ORA-12162: TNS:net service name is incorrectly specified 
+
+
+SQL> conn tiger
+ERROR:
+ORA-12162: TNS:net service name is incorrectly specified 
+
+
+SQL> conn scott
+ERROR:
+ORA-12162: TNS:net service name is incorrectly specified 
+
+
+SQL> conn scott/tiger@orcl
+Connected.
+SQL> disconn
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+SQL> conn scott/tiger@orcl
+Connected.
+SQL> conn sys/manager@orcl
+ERROR:
+ORA-28009: connection as SYS should be as SYSDBA or SYSOPER 
+
+
+Warning: You are no longer connected to ORACLE.
+SQL> conn sys/manager@orcl as sysdba
+Connected.
+SQL> conn scott/tiger@orcl
+Connected.
+SQL> show user
+USER is "SCOTT"
+SQL> conn scott/tiger@orcl
+Connected.
+SQL> conn sys/manager@orcl as sysdba
+Connected.
+SQL> show user
+USER is "SYS"
+SQL> conn scott/tiger;
+ERROR:
+ORA-12162: TNS:net service name is incorrectly specified 
+
+
+Warning: You are no longer connected to ORACLE.
+SQL> conn scott/tiger@orcl
+Connected.
+SQL> select * from user_tables;
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+T                              USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N          5        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         4            0          0          0           6                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            5       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+05-FEB-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+WKHISTORYDATA                  USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N       6339        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+        50            0          0          0          44                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED         6339       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+06-FEB-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+A_V_P_CUSTVIEW_HOLD_PT_LABEL   USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N          6        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         5            0          0          0          37                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            6       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+07-FEB-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+DEPT                           USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N          4        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         5            0          0          0          20                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            4       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+04-FEB-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+EMP                            USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N         14        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         5            0          0          0          38                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED           14       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+05-FEB-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+BONUS                          USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                            YES N          0        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         0            0          0          0           0                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            0       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+30-JAN-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  NO  DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+SALGRADE                       USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N          5        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         5            0          0          0          10                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            5       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+30-JAN-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+PLSQL_PROFILER_RUNS            USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                            YES N          0        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         0            0          0          0           0                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            0       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+30-JAN-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  NO  DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+PLSQL_PROFILER_UNITS           USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                            YES N          0        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         0            0          0          0           0                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            0       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+30-JAN-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  NO  DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+PLSQL_PROFILER_DATA            USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                            YES N          0        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         0            0          0          0           0                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED            0       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+30-JAN-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  NO  DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+E2                             USERS                                                                
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                               VALID            10                     1        255          65536  
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+    1048576           1  2147483645                                         YES N         14        
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+         4            0          0          0          38                         0                 
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                  0          1                    1               N      ENABLED           14       
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+10-FEB-17 NO               N N NO  DEFAULT DEFAULT DEFAULT DISABLED YES NO                  DISABLED
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+YES                                DISABLED DISABLED              NO  NO  YES DEFAULT               
+
+TABLE_NAME                     TABLESPACE_NAME                CLUSTER_NAME                          
+------------------------------ ------------------------------ ------------------------------        
+IOT_NAME                       STATUS     PCT_FREE   PCT_USED  INI_TRANS  MAX_TRANS INITIAL_EXTENT  
+------------------------------ -------- ---------- ---------- ---------- ---------- --------------  
+NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS PCT_INCREASE  FREELISTS FREELIST_GROUPS LOG B   NUM_ROWS        
+----------- ----------- ----------- ------------ ---------- --------------- --- - ----------        
+    BLOCKS EMPTY_BLOCKS  AVG_SPACE  CHAIN_CNT AVG_ROW_LEN AVG_SPACE_FREELIST_BLOCKS                 
+---------- ------------ ---------- ---------- ----------- -------------------------                 
+NUM_FREELIST_BLOCKS DEGREE               INSTANCES            CACHE      TABLE_LO SAMPLE_SIZE       
+------------------- -------------------- -------------------- ---------- -------- -----------       
+LAST_ANAL PAR IOT_TYPE     T S NES BUFFER_ FLASH_C CELL_FL ROW_MOVE GLO USE DURATION        SKIP_COR
+--------- --- ------------ - - --- ------- ------- ------- -------- --- --- --------------- --------
+MON CLUSTER_OWNER                  DEPENDEN COMPRESS COMPRESS_FOR DRO REA SEG RESULT_               
+--- ------------------------------ -------- -------- ------------ --- --- --- -------               
+                                                                                                    
+
+11 rows selected.
+
+SQL> desc user_tables;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ TABLE_NAME                                            NOT NULL VARCHAR2(30)
+ TABLESPACE_NAME                                                VARCHAR2(30)
+ CLUSTER_NAME                                                   VARCHAR2(30)
+ IOT_NAME                                                       VARCHAR2(30)
+ STATUS                                                         VARCHAR2(8)
+ PCT_FREE                                                       NUMBER
+ PCT_USED                                                       NUMBER
+ INI_TRANS                                                      NUMBER
+ MAX_TRANS                                                      NUMBER
+ INITIAL_EXTENT                                                 NUMBER
+ NEXT_EXTENT                                                    NUMBER
+ MIN_EXTENTS                                                    NUMBER
+ MAX_EXTENTS                                                    NUMBER
+ PCT_INCREASE                                                   NUMBER
+ FREELISTS                                                      NUMBER
+ FREELIST_GROUPS                                                NUMBER
+ LOGGING                                                        VARCHAR2(3)
+ BACKED_UP                                                      VARCHAR2(1)
+ NUM_ROWS                                                       NUMBER
+ BLOCKS                                                         NUMBER
+ EMPTY_BLOCKS                                                   NUMBER
+ AVG_SPACE                                                      NUMBER
+ CHAIN_CNT                                                      NUMBER
+ AVG_ROW_LEN                                                    NUMBER
+ AVG_SPACE_FREELIST_BLOCKS                                      NUMBER
+ NUM_FREELIST_BLOCKS                                            NUMBER
+ DEGREE                                                         VARCHAR2(20)
+ INSTANCES                                                      VARCHAR2(20)
+ CACHE                                                          VARCHAR2(10)
+ TABLE_LOCK                                                     VARCHAR2(8)
+ SAMPLE_SIZE                                                    NUMBER
+ LAST_ANALYZED                                                  DATE
+ PARTITIONED                                                    VARCHAR2(3)
+ IOT_TYPE                                                       VARCHAR2(12)
+ TEMPORARY                                                      VARCHAR2(1)
+ SECONDARY                                                      VARCHAR2(1)
+ NESTED                                                         VARCHAR2(3)
+ BUFFER_POOL                                                    VARCHAR2(7)
+ FLASH_CACHE                                                    VARCHAR2(7)
+ CELL_FLASH_CACHE                                               VARCHAR2(7)
+ ROW_MOVEMENT                                                   VARCHAR2(8)
+ GLOBAL_STATS                                                   VARCHAR2(3)
+ USER_STATS                                                     VARCHAR2(3)
+ DURATION                                                       VARCHAR2(15)
+ SKIP_CORRUPT                                                   VARCHAR2(8)
+ MONITORING                                                     VARCHAR2(3)
+ CLUSTER_OWNER                                                  VARCHAR2(30)
+ DEPENDENCIES                                                   VARCHAR2(8)
+ COMPRESSION                                                    VARCHAR2(8)
+ COMPRESS_FOR                                                   VARCHAR2(12)
+ DROPPED                                                        VARCHAR2(3)
+ READ_ONLY                                                      VARCHAR2(3)
+ SEGMENT_CREATED                                                VARCHAR2(3)
+ RESULT_CACHE                                                   VARCHAR2(7)
+
+SQL> desc user_tables;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ TABLE_NAME                                            NOT NULL VARCHAR2(30)
+ TABLESPACE_NAME                                                VARCHAR2(30)
+ CLUSTER_NAME                                                   VARCHAR2(30)
+ IOT_NAME                                                       VARCHAR2(30)
+ STATUS                                                         VARCHAR2(8)
+ PCT_FREE                                                       NUMBER
+ PCT_USED                                                       NUMBER
+ INI_TRANS                                                      NUMBER
+ MAX_TRANS                                                      NUMBER
+ INITIAL_EXTENT                                                 NUMBER
+ NEXT_EXTENT                                                    NUMBER
+ MIN_EXTENTS                                                    NUMBER
+ MAX_EXTENTS                                                    NUMBER
+ PCT_INCREASE                                                   NUMBER
+ FREELISTS                                                      NUMBER
+ FREELIST_GROUPS                                                NUMBER
+ LOGGING                                                        VARCHAR2(3)
+ BACKED_UP                                                      VARCHAR2(1)
+ NUM_ROWS                                                       NUMBER
+ BLOCKS                                                         NUMBER
+ EMPTY_BLOCKS                                                   NUMBER
+ AVG_SPACE                                                      NUMBER
+ CHAIN_CNT                                                      NUMBER
+ AVG_ROW_LEN                                                    NUMBER
+ AVG_SPACE_FREELIST_BLOCKS                                      NUMBER
+ NUM_FREELIST_BLOCKS                                            NUMBER
+ DEGREE                                                         VARCHAR2(20)
+ INSTANCES                                                      VARCHAR2(20)
+ CACHE                                                          VARCHAR2(10)
+ TABLE_LOCK                                                     VARCHAR2(8)
+ SAMPLE_SIZE                                                    NUMBER
+ LAST_ANALYZED                                                  DATE
+ PARTITIONED                                                    VARCHAR2(3)
+ IOT_TYPE                                                       VARCHAR2(12)
+ TEMPORARY                                                      VARCHAR2(1)
+ SECONDARY                                                      VARCHAR2(1)
+ NESTED                                                         VARCHAR2(3)
+ BUFFER_POOL                                                    VARCHAR2(7)
+ FLASH_CACHE                                                    VARCHAR2(7)
+ CELL_FLASH_CACHE                                               VARCHAR2(7)
+ ROW_MOVEMENT                                                   VARCHAR2(8)
+ GLOBAL_STATS                                                   VARCHAR2(3)
+ USER_STATS                                                     VARCHAR2(3)
+ DURATION                                                       VARCHAR2(15)
+ SKIP_CORRUPT                                                   VARCHAR2(8)
+ MONITORING                                                     VARCHAR2(3)
+ CLUSTER_OWNER                                                  VARCHAR2(30)
+ DEPENDENCIES                                                   VARCHAR2(8)
+ COMPRESSION                                                    VARCHAR2(8)
+ COMPRESS_FOR                                                   VARCHAR2(12)
+ DROPPED                                                        VARCHAR2(3)
+ READ_ONLY                                                      VARCHAR2(3)
+ SEGMENT_CREATED                                                VARCHAR2(3)
+ RESULT_CACHE                                                   VARCHAR2(7)
+
+SQL> select table_name, table_space from user_tables;
+select table_name, table_space from user_tables
+                   *
+ERROR at line 1:
+ORA-00904: "TABLE_SPACE": invalid identifier 
+
+
+SQL> select table_name, tablespace_name from user_tables;
+
+TABLE_NAME                     TABLESPACE_NAME                                                      
+------------------------------ ------------------------------                                       
+T                              USERS                                                                
+WKHISTORYDATA                  USERS                                                                
+A_V_P_CUSTVIEW_HOLD_PT_LABEL   USERS                                                                
+DEPT                           USERS                                                                
+EMP                            USERS                                                                
+BONUS                          USERS                                                                
+SALGRADE                       USERS                                                                
+PLSQL_PROFILER_RUNS            USERS                                                                
+PLSQL_PROFILER_UNITS           USERS                                                                
+PLSQL_PROFILER_DATA            USERS                                                                
+E2                             USERS                                                                
+
+11 rows selected.
+
+SQL> select sscii('a') from dual;
+select sscii('a') from dual
+       *
+ERROR at line 1:
+ORA-00904: "SSCII": invalid identifier 
+
+
+SQL> select ascii('a') from dual;
+
+ASCII('A')                                                                                          
+----------                                                                                          
+        97                                                                                          
+
+SQL> select concat('hello', 'world') from dual;
+
+CONCAT('HE                                                                                          
+----------                                                                                          
+helloworld                                                                                          
+
+SQL> select concat('hello', ' world') from dual;
+
+CONCAT('HEL                                                                                         
+-----------                                                                                         
+hello world                                                                                         
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> quit

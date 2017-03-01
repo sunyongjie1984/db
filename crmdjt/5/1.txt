@@ -1,0 +1,18 @@
+SQL> set serveroutput on
+SQL> declare
+  2  a int:=100;
+  3  b int:=200;
+  4  c number;
+  5  begin
+  6  c:=(a + b) / (a - b);
+  7  dbms_output.put_line(c);
+  8  exception
+  9  when zero_divide then
+ 10  dbms_output.put_line('chu shu == 0');
+ 11  end;
+ 12  /
+-3                                                                              
+
+PL/SQL procedure successfully completed.
+
+SQL> spool off;

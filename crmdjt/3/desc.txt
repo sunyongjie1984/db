@@ -1,0 +1,38 @@
+SQL> select ename,job,
+  2  #desc scott.emp
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ ENAME                                              VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+  2  mgr from scott.emp;
+
+ENAME      JOB              MGR                                                 
+---------- --------- ----------                                                 
+SMITH      CLERK           7902                                                 
+ALLEN      SALESMAN        7698                                                 
+WARD       SALESMAN        7698                                                 
+JONES      MANAGER         7839                                                 
+MARTIN     SALESMAN        7698                                                 
+BLAKE      MANAGER         7839                                                 
+CLARK      MANAGER         7839                                                 
+SCOTT      ANALYST         7566                                                 
+KING       PRESIDENT                                                            
+TURNER     SALESMAN        7698                                                 
+ADAMS      CLERK           7788                                                 
+
+ENAME      JOB              MGR                                                 
+---------- --------- ----------                                                 
+JAMES      CLERK           7698                                                 
+FORD       ANALYST         7566                                                 
+MILLER     CLERK           7782                                                 
+
+14 rows selected.
+
+SQL> spool off;

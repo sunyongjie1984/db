@@ -1,0 +1,493 @@
+SQL> 
+SQL> 
+SQL> @crmdjt/4/QueryMultiTAble02
+inner join on
+           *
+ERROR at line 3:
+ORA-00903: invalid table name 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+e.deptno = d.deptno
+*
+ERROR at line 3:
+ORA-00905: missing keyword 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+e.deptno = d.deptno
+*
+ERROR at line 3:
+ORA-00905: missing keyword 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO     DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO     DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO     DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO     DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno 'e.deptno', d.deptno 'd.deptno'
+                                           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'e.deptno', d.deptno as 'd.deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'e.deptno', d.deptno as 'd.deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'e.deptno', d.deptno as 'd.deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'e.deptno', d.deptno as 'd.deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'e.deptno', d.deptno as 'd.deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'e.deptno', d.deptno as 'd.deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno as 'deptno', d.deptno as 'deptno'
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno 'deptno', d.deptno 'deptno'
+                                           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno 'deptno', d.deptno 'deptno'
+                                           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno 'deptno', d.deptno 'deptno'
+                                           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno 'deptno', d.deptno 'deptno'
+                                           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO     DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO     DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> 
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO         KK                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO         KK                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno, d.deptno 'kk'
+                                                     *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno, d.deptno d.deptno
+                                                      *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+select e.empno, e.ename, d.dname, e.deptno, d.deptno d.deptno
+                                                      *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME              DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME            E_DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME            E_DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME            E_DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> insert into(empno, ename, job) values(9527, 'easet', 'salesman');
+insert into(empno, ename, job) values(9527, 'easet', 'salesman')
+            *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> insert into emp(empno, ename, job) values(9527, 'easet', 'salesman');
+
+1 row created.
+
+SQL> select * from emp;
+
+EMPNO ENAME      JOB              MGR HIREDATE           SAL       COMM     DEPTNO                  
+----- ---------- --------- ---------- --------- ------------ ---------- ----------                  
+ 7369 SMITH      CLERK           7902 17-DEC-80      $800.00                    20                  
+ 7499 ALLEN      SALESMAN        7698 20-FEB-81    $1,920.00        300         30                  
+ 7521 WARD       SALESMAN        7698 22-FEB-81    $1,500.00        500         30                  
+ 7566 JONES      MANAGER         7839 02-APR-81    $2,975.00                    20                  
+ 7654 MARTIN     SALESMAN        7698 28-SEP-81    $1,500.00       1400         30                  
+ 7698 BLAKE      MANAGER         7839 01-MAY-81    $2,850.00                    30                  
+ 7782 CLARK      MANAGER         7839 09-JUN-81    $2,450.00                    10                  
+ 7788 SCOTT      ANALYST         7566 19-APR-87    $3,000.00                    20                  
+ 7839 KING       PRESIDENT            17-NOV-81    $5,000.00                    10                  
+ 7844 TURNER     SALESMAN        7698 08-SEP-81    $1,800.00          0         30                  
+ 7876 ADAMS      CLERK           7788 23-MAY-87    $1,100.00                    20                  
+
+EMPNO ENAME      JOB              MGR HIREDATE           SAL       COMM     DEPTNO                  
+----- ---------- --------- ---------- --------- ------------ ---------- ----------                  
+ 7900 JAMES      CLERK           7698 03-DEC-81      $950.00                    30                  
+ 7902 FORD       ANALYST         7566 03-DEC-81    $3,000.00                    20                  
+ 7934 MILLER     CLERK           7782 23-JAN-82    $1,300.00                    10                  
+ 9527 easet      salesman                                                                           
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from emp;
+
+EMPNO ENAME      JOB              MGR HIREDATE           SAL       COMM     DEPTNO                  
+----- ---------- --------- ---------- --------- ------------ ---------- ----------                  
+ 7369 SMITH      CLERK           7902 17-DEC-80      $800.00                    20                  
+ 7499 ALLEN      SALESMAN        7698 20-FEB-81    $1,920.00        300         30                  
+ 7521 WARD       SALESMAN        7698 22-FEB-81    $1,500.00        500         30                  
+ 7566 JONES      MANAGER         7839 02-APR-81    $2,975.00                    20                  
+ 7654 MARTIN     SALESMAN        7698 28-SEP-81    $1,500.00       1400         30                  
+ 7698 BLAKE      MANAGER         7839 01-MAY-81    $2,850.00                    30                  
+ 7782 CLARK      MANAGER         7839 09-JUN-81    $2,450.00                    10                  
+ 7788 SCOTT      ANALYST         7566 19-APR-87    $3,000.00                    20                  
+ 7839 KING       PRESIDENT            17-NOV-81    $5,000.00                    10                  
+ 7844 TURNER     SALESMAN        7698 08-SEP-81    $1,800.00          0         30                  
+ 7876 ADAMS      CLERK           7788 23-MAY-87    $1,100.00                    20                  
+
+EMPNO ENAME      JOB              MGR HIREDATE           SAL       COMM     DEPTNO                  
+----- ---------- --------- ---------- --------- ------------ ---------- ----------                  
+ 7900 JAMES      CLERK           7698 03-DEC-81      $950.00                    30                  
+ 7902 FORD       ANALYST         7566 03-DEC-81    $3,000.00                    20                  
+ 7934 MILLER     CLERK           7782 23-JAN-82    $1,300.00                    10                  
+ 9527 easet      salesman                                                                           
+
+15 rows selected.
+
+SQL> select e.empno, e.name, e.job, d.deptno, d.name
+  2  from emp e left join dept d
+  3  on e.deptno = d.deptno;
+select e.empno, e.name, e.job, d.deptno, d.name
+                                         *
+ERROR at line 1:
+ORA-00904: "D"."NAME": invalid identifier 
+
+
+SQL> select e.empno, e.name, e.job, d.deptno, d.name
+  2  from emp e left join dept d
+  3  on e.deptno = d.deptno;
+select e.empno, e.name, e.job, d.deptno, d.name
+                                         *
+ERROR at line 1:
+ORA-00904: "D"."NAME": invalid identifier 
+
+
+SQL> select e.empno, e.name, e.job, d.deptno, d.dname
+  2  from emp e left join dept d
+  3  on e.deptno = d.deptno;
+select e.empno, e.name, e.job, d.deptno, d.dname
+                *
+ERROR at line 1:
+ORA-00904: "E"."NAME": invalid identifier 
+
+
+SQL> select e.empno, e.ename, e.job, d.deptno, d.dname
+  2  from emp e left join dept d
+  3  on e.deptno = d.deptno;
+
+EMPNO ENAME      JOB           DEPTNO DNAME                                                         
+----- ---------- --------- ---------- --------------                                                
+ 7934 MILLER     CLERK             10 ACCOUNTING                                                    
+ 7839 KING       PRESIDENT         10 ACCOUNTING                                                    
+ 7782 CLARK      MANAGER           10 ACCOUNTING                                                    
+ 7902 FORD       ANALYST           20 RESEARCH                                                      
+ 7876 ADAMS      CLERK             20 RESEARCH                                                      
+ 7788 SCOTT      ANALYST           20 RESEARCH                                                      
+ 7566 JONES      MANAGER           20 RESEARCH                                                      
+ 7369 SMITH      CLERK             20 RESEARCH                                                      
+ 7900 JAMES      CLERK             30 SALES                                                         
+ 7844 TURNER     SALESMAN          30 SALES                                                         
+ 7698 BLAKE      MANAGER           30 SALES                                                         
+
+EMPNO ENAME      JOB           DEPTNO DNAME                                                         
+----- ---------- --------- ---------- --------------                                                
+ 7654 MARTIN     SALESMAN          30 SALES                                                         
+ 7521 WARD       SALESMAN          30 SALES                                                         
+ 7499 ALLEN      SALESMAN          30 SALES                                                         
+ 9527 easet      salesman                                                                           
+
+15 rows selected.
+
+SQL> 
+SQL> quit
+SQL> @crmdjt/4/leftjoin
+
+EMPNO ENAME      JOB           DEPTNO DNAME                                                         
+----- ---------- --------- ---------- --------------                                                
+ 7934 MILLER     CLERK             10 ACCOUNTING                                                    
+ 7839 KING       PRESIDENT         10 ACCOUNTING                                                    
+ 7782 CLARK      MANAGER           10 ACCOUNTING                                                    
+ 7902 FORD       ANALYST           20 RESEARCH                                                      
+ 7876 ADAMS      CLERK             20 RESEARCH                                                      
+ 7788 SCOTT      ANALYST           20 RESEARCH                                                      
+ 7566 JONES      MANAGER           20 RESEARCH                                                      
+ 7369 SMITH      CLERK             20 RESEARCH                                                      
+ 7900 JAMES      CLERK             30 SALES                                                         
+ 7844 TURNER     SALESMAN          30 SALES                                                         
+ 7698 BLAKE      MANAGER           30 SALES                                                         
+
+EMPNO ENAME      JOB           DEPTNO DNAME                                                         
+----- ---------- --------- ---------- --------------                                                
+ 7654 MARTIN     SALESMAN          30 SALES                                                         
+ 7521 WARD       SALESMAN          30 SALES                                                         
+ 7499 ALLEN      SALESMAN          30 SALES                                                         
+ 9527 easet      salesman                                                                           
+
+15 rows selected.
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME            E_DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7698 BLAKE      SALES                  30         30                                               
+
+SQL> @crmdjt/4/QueryMultiTAble02
+
+EMPNO ENAME      DNAME            E_DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7782 CLARK      ACCOUNTING             10         10                                               
+ 7839 KING       ACCOUNTING             10         10                                               
+ 7934 MILLER     ACCOUNTING             10         10                                               
+ 7369 SMITH      RESEARCH               20         20                                               
+ 7566 JONES      RESEARCH               20         20                                               
+ 7788 SCOTT      RESEARCH               20         20                                               
+ 7876 ADAMS      RESEARCH               20         20                                               
+ 7902 FORD       RESEARCH               20         20                                               
+ 7499 ALLEN      SALES                  30         30                                               
+ 7521 WARD       SALES                  30         30                                               
+ 7654 MARTIN     SALES                  30         30                                               
+
+EMPNO ENAME      DNAME            E_DEPTNO   D_DEPTNO                                               
+----- ---------- -------------- ---------- ----------                                               
+ 7698 BLAKE      SALES                  3SQL> show user;
+USER is "SCOTT"
+SQL> select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID                                                   
+------------------------------ ------- ----------                                                   
+A_V_P_CUSTVIEW_HOLD_PT_LABEL   TABLE                                                                
+BIN$R9gVz8CMWQjgUAB/AQBlcQ==$0 TABLE                                                                
+BONUS                          TABLE                                                                
+DEPT                           TABLE                                                                
+DEPT2                          TABLE                                                                
+DEPT3                          TABLE                                                                
+DEPT_LOG                       TABLE                                                                
+E2                             TABLE                                                                
+EMP                            TABLE                                                                
+EMP_VIEW                       VIEW                                                                 
+EMP_VIEW_READONLY              VIEW                                                                 
+
+TNAME                          TABTYPE  CLUSTERID                                                   
+------------------------------ ------- ----------                                                   
+NEWAVGSAL                      TABLE                                                                
+O_V_P_REMIND_INIT_RULE         TABLE                                                                
+PLSQL_PROFILER_DATA            TABLE                                                                
+PLSQL_PROFILER_RUNS            TABLE                                                                
+PLSQL_PROFILER_UNITS           TABLE                                                                
+SALGRADE                       TABLE                                                                
+STUDENTS                       TABLE                                                                
+T                              TABLE                                                                
+TESTA                          TABLE                                                                
+TEST_TABLE                     TABLE                                                                
+WKHISTORYDATA                  TABLE                                                                
+
+22 rows selected.
+
+SQL> clear scr;
+SQL> select em2.ename, em1.ename
+  2  from emp em1 left join emp em2
+  3  on em1.mgr = em2.empno
+  4  order by em1.mgr;
+
+ENAME      ENAME                                                                                    
+---------- ----------                                                                               
+JONES      FORD                                                                                     
+JONES      SCOTT                                                                                    
+BLAKE      JAMES                                                                                    
+BLAKE      TURNER                                                                                   
+BLAKE      MARTIN                                                                                   
+BLAKE      WARD                                                                                     
+BLAKE      ALLEN                                                                                    
+CLARK      MILLER                                                                                   
+SCOTT      ADAMS                                                                                    
+KING       CLARK                                                                                    
+KING       BLAKE                                                                                    
+
+ENAME      ENAME                                                                                    
+---------- ----------                                                                               
+KING       JONES                                                                                    
+FORD       SMITH                                                                                    
+           easet                                                                                    
+           KING                                                                                     
+
+15 rows selected.
+
+SQL> quit
+0         30                                               
+ 7844 TURNER     SALES                  30         30                                               
+ 7900 JAMES      SALES                  30         30                                               
+
+14 rows selected.
+
+SQL> @crmdjt/4/leftjoin
+
+EMPNO ENAME      JOB           DEPTNO DNAME                                                         
+----- ---------- --------- ---------- --------------                                                
+ 7934 MILLER     CLERK             10 ACCOUNTING                                                    
+ 7839 KING       PRESIDENT         10 ACCOUNTING                                                    
+ 7782 CLARK      MANAGER           10 ACCOUNTING                                                    
+ 7902 FORD       ANALYST           20 RESEARCH                                                      
+ 7876 ADAMS      CLERK             20 RESEARCH                                                      
+ 7788 SCOTT      ANALYST           20 RESEARCH                                                      
+ 7566 JONES      MANAGER           20 RESEARCH                                                      
+ 7369 SMITH      CLERK             20 RESEARCH                                                      
+ 7900 JAMES      CLERK             30 SALES                                                         
+ 7844 TURNER     SALESMAN          30 SALES                                                         
+ 7698 BLAKE      MANAGER           30 SALES                                                         
+
+EMPNO ENAME      JOB           DEPTNO DNAME                                                         
+----- ---------- --------- ---------- --------------                                                
+ 7654 MARTIN     SALESMAN          30 SALES                                                         
+ 7521 WARD       SALESMAN          30 SALES                                                         
+ 7499 ALLEN      SALESMAN          30 SALES                                                         
+ 9527 easet      salesman                                                                           
+
+15 rows selected.
+
+SQL> quit

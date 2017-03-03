@@ -1,5 +1,6 @@
 -- set pagesize 30;
--- set lin 200;
+spool spool.log app;
+set linesize 100;
 -- set pause on;
 
 set serveroutput on;

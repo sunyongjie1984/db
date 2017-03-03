@@ -10,7 +10,7 @@
 
 -- select e.empno, e.ename, e.deptno from emp e, dept d where e.deptno = d.deptno;
 
-select t1.empno, t1.ename, t1.deptno, t1.sal, t2.AvgSal
+select t1.empno, t1.ename, t1.sal, t2.AvgSal, t1.deptno
 from emp t1,
 (select deptno, avg(sal) AvgSal from emp group by deptno) t2
 where

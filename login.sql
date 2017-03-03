@@ -22,3 +22,5 @@ col week format a06;
 col dept_name format a25;
 col deptname format a25;
 col object_name format a25;
+col avgsal format $999,999.00;
+col sal format $999,999.00;

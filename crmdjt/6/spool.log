@@ -23257,4 +23257,38 @@ OBJECT_NAME               OBJECT_TYPE
 ------------------------- -------------------                                                       
 NEWAVGSAL                 TABLE                                                                     
 O_V_P_REMIND_INIT_RULE    TABLE                                                                     
-SALGRADE                  TABLE           
+SALGRADE                  TABLE                                                                     
+T                         TABLE                                                                     
+TESTA                     TABLE                                                                     
+SYS_C0015184              INDEX                                                                     
+FUNCGETAVGPAY             FUNCTION                                                                  
+TRUN_TABLE                PROCEDURE                                                                 
+
+39 rows selected.
+
+SQL> select object_name, distinct object_type from user_objects;
+select object_name, distinct object_type from user_objects
+                    *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select  distinct object_type from user_objects;
+
+OBJECT_TYPE                                                                                         
+-------------------                                                                                 
+SEQUENCE                                                                                            
+PROCEDURE                                                                                           
+PACKAGE                                                                                             
+PACKAGE BODY                                                                                        
+TRIGGER                                                                                             
+FUNCTION                                                                                            
+TABLE                                                                                               
+VIEW                                                                                                
+INDEX                                                                                               
+
+9 rows selected.
+
+SQL> quti
+SP2-0042: unknown command "quti" - rest of line ignored.
+SQL> quit

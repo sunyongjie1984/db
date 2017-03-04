@@ -4,6 +4,9 @@ set linesize 100;
 -- set pause on;
 
 set serveroutput on;
+set echo on;
+
+define _EDITOR = vi;
 
 col name format a10;
 col prod_name format a25;

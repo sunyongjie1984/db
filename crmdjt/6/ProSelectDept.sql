@@ -1,4 +1,4 @@
-create or replace procedure SelectDept(
+create or replace procedure ProSelectDept(
     num_deptno in number,
     var_dname out dept.dname%type,
     var_loc out dept.loc%type) is
@@ -12,5 +12,5 @@ exception
         no_data_found
     then
         dbms_output.put_line('deptno error');
-end SelectDept;
+end ProSelectDept;
 /

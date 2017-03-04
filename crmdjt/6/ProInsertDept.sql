@@ -3,5 +3,5 @@ begin
     insert into dept values(77, 'shi chang', 'jilin');
     commit;
     dbms_output.put_line('insert successfully');
-end;
+end ProInsertDept;
 /

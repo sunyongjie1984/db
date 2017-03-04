@@ -1,0 +1,20 @@
+SQL> show user;
+USER is "SYS"
+SQL> CREATE USER personnel_manage IDENTIFIED BY tiger
+  2  ;
+
+User created.
+
+SQL> grant to personnel_manage dba;
+grant to personnel_manage dba
+      *
+ERROR at line 1:
+ORA-00990: missing or invalid privilege 
+
+
+SQL> grant dba to personnel_manage;
+
+Grant succeeded.
+
+SQL> conn personnel_manage/tiger@orcl;
+Connected.

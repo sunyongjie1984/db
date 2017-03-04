@@ -491,3 +491,63 @@ EMPNO ENAME      JOB           DEPTNO DNAME
 15 rows selected.
 
 SQL> quit
+SQL> show user;
+USER is "SCOTT"
+SQL> @/users/jack/git/db/crmdjt/4/selfjoin
+
+ENAME      ENAME                                                                                    
+---------- ----------                                                                               
+JONES      FORD                                                                                     
+JONES      SCOTT                                                                                    
+BLAKE      JAMES                                                                                    
+BLAKE      TURNER                                                                                   
+BLAKE      MARTIN                                                                                   
+BLAKE      WARD                                                                                     
+BLAKE      ALLEN                                                                                    
+CLARK      MILLER                                                                                   
+SCOTT      ADAMS                                                                                    
+KING       CLARK                                                                                    
+KING       BLAKE                                                                                    
+
+ENAME      ENAME                                                                                    
+---------- ----------                                                                               
+KING       JONES                                                                                    
+FORD       SMITH                                                                                    
+           easet                                                                                    
+           KING                                                                                     
+
+15 rows selected.
+
+SQL> @/users/jack/git/db/crmdjt/4/selfjoin;
+
+ENAME      ENAME                                                                                    
+---------- ----------                                                                               
+JONES      FORD                                                                                     
+JONES      SCOTT                                                                                    
+BLAKE      JAMES                                                                                    
+BLAKE      TURNER                                                                                   
+BLAKE      MARTIN                                                                                   
+BLAKE      WARD                                                                                     
+BLAKE      ALLEN                                                                                    
+CLARK      MILLER                                                                                   
+SCOTT      ADAMS                                                                                    
+KING       CLARK                                                                                    
+KING       BLAKE                                                                                    
+
+ENAME      ENAME                                                                                    
+---------- ----------                                                                               
+KING       JONES                                                                                    
+FORD       SMITH                                                                                    
+           easet                                                                                    
+           KING                                                                                     
+
+15 rows selected.
+
+SQL> conn hr/hr@orcl
+Connected.
+SQL> show user;
+USER is "HR"
+SQL> clear screen;
+SQL> conn scott/tiger@orcl;
+Connected.
+SQL> quit

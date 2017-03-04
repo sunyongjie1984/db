@@ -6,6 +6,7 @@ set linesize 100;
 set serveroutput on;
 
 col name format a10;
+col prod_name format a25;
 col Name format a30;
 col Name format a10;
 col Table_Name format a28;

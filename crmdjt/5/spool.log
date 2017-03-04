@@ -1,0 +1,368 @@
+SQL> @./crmdjt/5/FunIntro
+
+Warning: Function created with compilation errors.
+
+SQL> @./crmdjt/5/FunIntro
+
+Warning: Function created with compilation errors.
+
+SQL> @./crmdjt/5/FunIntro
+
+Warning: Function created with compilation errors.
+
+SQL> exit
+SQL> @./crmdjt/5/FunIntro
+
+Function created.
+
+SQL> var int := 2
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+                    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+                    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+                    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+SQL> var number := 2;
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+                    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+                    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+                    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+SQL> a number := 2;
+ 14* end;number := 2
+SQL> variable a int := 2;
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+                    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+                    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+                    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+SQL> variable a number := 2;
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+                    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+                    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+                    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+SQL> quit
+SQL> select FunIntro(100, 200) from dual;
+
+FUNINTRO(100,200)                                                                                   
+-----------------                                                                                   
+               -3                                                                                   
+
+-3                                                                                                  
+SQL> select FunIntro(200, 200) from dual;
+
+FUNINTRO(200,200)                                                                                   
+-----------------                                                                                   
+                0                                                                                   
+
+divide zero                                                                                         
+SQL> begin
+  2  a int := 100;
+  3  b int := 200;
+  4  c = FunIntro(a, b);
+  5  print c;
+  6  PRINT c;
+  7  dbms_output.putline(c);
+  8  dbms_output.put_line(c);
+  9  end;
+ 10  /
+a int := 100;
+  *
+ERROR at line 2:
+ORA-06550: line 2, column 3: 
+PLS-00103: Encountered the symbol "INT" when expecting one of the following: 
+:= . ( @ % ; 
+The symbol "." was substituted for "INT" to continue. 
+ORA-06550: line 3, column 3: 
+PLS-00103: Encountered the symbol "INT" when expecting one of the following: 
+:= . ( @ % ; 
+The symbol "." was substituted for "INT" to continue. 
+ORA-06550: line 4, column 3: 
+PLS-00103: Encountered the symbol "=" when expecting one of the following: 
+:= . ( @ % ; 
+
+
+SQL> PRINT a;
+SP2-0552: Bind variable "A" not declared.
+SQL> quit
+SQL> declare
+  2  a int;
+  3  b int;
+  4  begin
+  5  dbms_output.put_line(FunIntro(100, 200));
+  6  end;
+  7  /
+-3                                                                                                  
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+    c = FunIntro(a, b);
+      *
+ERROR at line 6:
+ORA-06550: line 6, column 7: 
+PLS-00103: Encountered the symbol "=" when expecting one of the following: 
+:= . ( @ % ; 
+
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> @./crmdjt/5/UseFunIntro
+-3                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+SQL> var_job emp.job%type;
+SP2-0553: Illegal variable name "_job".
+SQL> declare
+  2  var_job emp.job%type;
+  3  /
+var_job emp.job%type;
+                    *
+ERROR at line 2:
+ORA-06550: line 2, column 21: 
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the following: 
+begin function pragma procedure subtype type <an identifier> 
+<a double-quoted delimited-identifier> current cursor delete 
+exists prior 
+
+
+SQL> /
+var_job emp.job%type;
+                    *
+ERROR at line 2:
+ORA-06550: line 2, column 21: 
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the following: 
+begin function pragma procedure subtype type <an identifier> 
+<a double-quoted delimited-identifier> current cursor delete 
+exists prior 
+
+
+SQL> /
+var_job emp.job%type;
+                    *
+ERROR at line 2:
+ORA-06550: line 2, column 21: 
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the following: 
+begin function pragma procedure subtype type <an identifier> 
+<a double-quoted delimited-identifier> current cursor delete 
+exists prior 
+
+
+SQL> clear scr;
+SQL> declare
+  2  type emp_type is record
+  3  (
+  4  var_ename varchar2(20),
+  5  var_job varchar2(20),
+  6  var_sal number);
+  7  empinfo emp_type;
+  8  begin
+  9  select ename,job,sal into empinfo from emp
+ 10  where empno = 7369;
+ 11  dbms_output.put_line(empinfo.ename||empinfo.job||empinfo.sal);
+ 12  end;
+ 13  /
+dbms_output.put_line(empinfo.ename||empinfo.job||empinfo.sal);
+                             *
+ERROR at line 11:
+ORA-06550: line 11, column 30: 
+PLS-00302: component 'ENAME' must be declared 
+ORA-06550: line 11, column 1: 
+PL/SQL: Statement ignored 
+
+
+SQL> 
+SQL>   2  type emp_type is record
+SQL>   3  (
+SQL>   4  var_ename varchar2(20),
+SQL>   5  var_job varchar2(20),
+SQL>   6  var_sal number);
+SQL>   7  empinfo emp_type;
+SQL>   8  begin
+SQL>   9  select ename,job,sal into empinfo from emp
+SQL>  10  where empno = 7369;
+SQL>  11  dbms_output.put_line(empinfo.ename||empinfo.job||empinfo.sal);
+SQL>  12  end;
+SQL>  13  /
+SQL> declare
+  2    2  type emp_type is record
+  3    3  (
+  4    4  var_ename varchar2(20),
+  5    5  var_job varchar2(20),
+  6    6  var_sal number);
+  7    7  empinfo emp_type;
+  8    8  begin
+  9    9  select ename,job,sal into empinfo from emp
+ 10   10  where empno = 7369;
+ 11  
+ 12  /
+  2  type emp_type is record
+  *
+ERROR at line 2:
+ORA-06550: line 2, column 3: 
+PLS-00103: Encountered the symbol "2" when expecting one of the following: 
+begin function pragma procedure subtype type <an identifier> 
+<a double-quoted delimited-identifier> current cursor delete 
+exists prior 
+
+
+SQL> declare
+  2  /
+declare
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7: 
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the following: 
+begin function pragma procedure subtype type <an identifier> 
+<a double-quoted delimited-identifier> current cursor delete 
+exists prior 
+
+
+SQL> quit
+SQL> declare
+  2  type emp_type is record
+  3  (
+  4  var_ename varchar2(20),
+  5  var_job varchar2(20),
+  6  var_sal number);
+  7  empinfo emp_type;
+  8  begin
+  9  select ename,job,sal into empinfo from emp
+ 10  where empno = 7369;
+ 11  dbms_output.put_line(empinfo.var_ename);
+ 12  /
+dbms_output.put_line(empinfo.var_ename);
+                                       *
+ERROR at line 11:
+ORA-06550: line 11, column 40: 
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the following: 
+( begin case declare end exception exit for goto if loop mod 
+null pragma raise return select update while with 
+<an identifier> <a double-quoted delimited-identifier> 
+<a bind variable> << continue close current delete fetch lock 
+insert open rollback savepoint set sql execute commit forall 
+merge pipe purge 
+
+
+SQL> declare
+  2  /
+declare
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7: 
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the following: 
+begin function pragma procedure subtype type <an identifier> 
+<a double-quoted delimited-identifier> current cursor delete 
+exists prior 
+
+
+SQL> @/Users/Jack/git/db/crmdjt/5/tmp.txt
+SMITHCLERK800                                                                                       
+
+PL/SQL procedure successfully completed.
+
+SQL> get /Users/Jack/git/db/crmdjt/5/tmp.txt
+  1  declare
+  2  type emp_type is record
+  3  (
+  4   var_ename varchar2(20),
+  5   var_job varchar2(20),
+  6   var_sal number);
+  7  empinfo emp_type;
+  8  begin
+  9  select ename,job,sal into empinfo from emp 
+ 10  where empno = 7369;
+ 11  dbms_output.put_line(empinfo.var_ename||empinfo.var_job||empinfo.var_sal);
+ 12* end;
+SQL> @/Users/Jack/git/db/crmdjt/5/DefineRowType.sql
+7369  SMITH   800                                                                                   
+
+PL/SQL procedure successfully completed.
+
+SQL> desc emp
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ EMPNO                                                 NOT NULL NUMBER(4)
+ ENAME                                                          VARCHAR2(10)
+ JOB                                                            VARCHAR2(9)
+ MGR                                                            NUMBER(4)
+ HIREDATE                                                       DATE
+ SAL                                                            NUMBER(7,2)
+ COMM                                                           NUMBER(7,2)
+ DEPTNO                                                         NUMBER(2)
+
+SQL> @/Users/Jack/git/db/crmdjt/5/IfThen.sql
+Eastis not longer then Xiaoke                                                                       
+
+PL/SQL procedure successfully completed.
+
+SQL> @/Users/Jack/git/db/crmdjt/5/IfThenElseIf.sql
+    elseif month >=4 and month <=6 then
+           *
+ERROR at line 6:
+ORA-06550: line 6, column 12: 
+PLS-00103: Encountered the symbol "MONTH" when expecting one of the following: 
+:= . ( @ % ; 
+The symbol ":=" was substituted for "MONTH" to continue. 
+ORA-06550: line 6, column 36: 
+PLS-00103: Encountered the symbol "THEN" when expecting one of the following: 
+* & - + ; / at mod remainder rem <an exponent (**)> and or || 
+multiset 
+ORA-06550: line 8, column 12: 
+PLS-00103: Encountered the symbol "MONTH" when expecting one of the following: 
+:= . ( @ % ; 
+The symbol ":=" was substituted for "MONTH" to continue. 
+ORA-06550: line 8, column 36: 
+PLS-00103: Encountered the symbol "THEN" when expecting one of the following: 
+* & - + ; / at mod remainder rem <an exponent (**)> and or || 
+multiset 
+ORA-06550: line 10, column 12: 
+PLS-00103: Encountered the symbol "MONTH" when expecting one of the following: 
+:= . ( @ % ; 
+The symbol ":=" was substituted for "MONTH" to continue. 
+ORA-06550: line 10, column 38: 
+PLS-00103: Encountered the symbol "THEN" when expecting one of the following: 
+* & - + ; / at mod remainder rem <an exponent (**)> and or || 
+multiset 
+ORA-06550: line 12, co

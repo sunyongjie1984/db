@@ -4,7 +4,7 @@ set linesize 100;
 -- set pause on;
 
 set serveroutput on;
-set echo on;
+-- set echo on;
 
 define _EDITOR = vi;
 

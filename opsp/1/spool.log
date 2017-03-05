@@ -6633,4 +6633,585 @@ SYS_C0015251
 SYS_LOB0000079583C00003$$                                                                           
 DENORM_DEMO_PKG                                                                                     
 
-OBJECT_NAME                                                              
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+DENORM_DEMO_PKG                                                                                     
+HR_JUST_NAMES                                                                                       
+ACCOUNTS                                                                                            
+FUNC_ACCOUNT_BALANCE                                                                                
+
+48 rows selected.
+
+SQL> select object_name from user_objects where object_type='FUN%';
+
+no rows selected
+
+SQL> select object_name from user_objects where object_type='%FUN%';
+
+no rows selected
+
+SQL> select object_name from user_objects where object_type like '%FUN%';
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+FUNC_ACCOUNT_BALANCE                                                                                
+
+SQL> drop func_account_balance;
+drop func_account_balance
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option 
+
+
+SQL> drop function func_account_balance;
+
+Function dropped.
+
+SQL> select object_name from user_objects where object_type like '%FUN%';
+
+no rows selected
+
+SQL> @./1/func_account_balance
+
+Function created.
+
+SQL> select object_name from user_tables;
+select object_name from user_tables
+       *
+ERROR at line 1:
+ORA-00904: "OBJECT_NAME": invalid identifier 
+
+
+SQL> select object_name from user_tables;
+select object_name from user_tables
+       *
+ERROR at line 1:
+ORA-00904: "OBJECT_NAME": invalid identifier 
+
+
+SQL> select object_name from user_tables;
+select object_name from user_tables
+       *
+ERROR at line 1:
+ORA-00904: "OBJECT_NAME": invalid identifier 
+
+
+SQL> show user;
+USER is "HR"
+SQL> desc user_tables;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ TABLE_NAME                                            NOT NULL VARCHAR2(30)
+ TABLESPACE_NAME                                                VARCHAR2(30)
+ CLUSTER_NAME                                                   VARCHAR2(30)
+ IOT_NAME                                                       VARCHAR2(30)
+ STATUS                                                         VARCHAR2(8)
+ PCT_FREE                                                       NUMBER
+ PCT_USED                                                       NUMBER
+ INI_TRANS                                                      NUMBER
+ MAX_TRANS                                                      NUMBER
+ INITIAL_EXTENT                                                 NUMBER
+ NEXT_EXTENT                                                    NUMBER
+ MIN_EXTENTS                                                    NUMBER
+ MAX_EXTENTS                                                    NUMBER
+ PCT_INCREASE                                                   NUMBER
+ FREELISTS                                                      NUMBER
+ FREELIST_GROUPS                                                NUMBER
+ LOGGING                                                        VARCHAR2(3)
+ BACKED_UP                                                      VARCHAR2(1)
+ NUM_ROWS                                                       NUMBER
+ BLOCKS                                                         NUMBER
+ EMPTY_BLOCKS                                                   NUMBER
+ AVG_SPACE                                                      NUMBER
+ CHAIN_CNT                                                      NUMBER
+ AVG_ROW_LEN                                                    NUMBER
+ AVG_SPACE_FREELIST_BLOCKS                                      NUMBER
+ NUM_FREELIST_BLOCKS                                            NUMBER
+ DEGREE                                                         VARCHAR2(20)
+ INSTANCES                                                      VARCHAR2(20)
+ CACHE                                                          VARCHAR2(10)
+ TABLE_LOCK                                                     VARCHAR2(8)
+ SAMPLE_SIZE                                                    NUMBER
+ LAST_ANALYZED                                                  DATE
+ PARTITIONED                                                    VARCHAR2(3)
+ IOT_TYPE                                                       VARCHAR2(12)
+ TEMPORARY                                                      VARCHAR2(1)
+ SECONDARY                                                      VARCHAR2(1)
+ NESTED                                                         VARCHAR2(3)
+ BUFFER_POOL                                                    VARCHAR2(7)
+ FLASH_CACHE                                                    VARCHAR2(7)
+ CELL_FLASH_CACHE                                               VARCHAR2(7)
+ ROW_MOVEMENT                                                   VARCHAR2(8)
+ GLOBAL_STATS                                                   VARCHAR2(3)
+ USER_STATS                                                     VARCHAR2(3)
+ DURATION                                                       VARCHAR2(15)
+ SKIP_CORRUPT                                                   VARCHAR2(8)
+ MONITORING                                                     VARCHAR2(3)
+ CLUSTER_OWNER                                                  VARCHAR2(30)
+ DEPENDENCIES                                                   VARCHAR2(8)
+ COMPRESSION                                                    VARCHAR2(8)
+ COMPRESS_FOR                                                   VARCHAR2(12)
+ DROPPED                                                        VARCHAR2(3)
+ READ_ONLY                                                      VARCHAR2(3)
+ SEGMENT_CREATED                                                VARCHAR2(3)
+ RESULT_CACHE                                                   VARCHAR2(7)
+
+SQL> select table_name from user_objects;
+select table_name from user_objects
+       *
+ERROR at line 1:
+ORA-00904: "TABLE_NAME": invalid identifier 
+
+
+SQL> select table_name from user_objects;
+select table_name from user_objects
+       *
+ERROR at line 1:
+ORA-00904: "TABLE_NAME": invalid identifier 
+
+
+SQL> select table_name from user_tables;
+
+TABLE_NAME                                                                                          
+----------------------------                                                                        
+BOOKS                                                                                               
+JOB_HISTORY                                                                                         
+DEPARTMENT_DENORMS                                                                                  
+NESTED_ID_TABLE                                                                                     
+ACCOUNTS                                                                                            
+DEPARTMENTS                                                                                         
+EMPLOYEES                                                                                           
+JOBS                                                                                                
+JOB_EMP                                                                                             
+LOCATIONS                                                                                           
+REGIONS                                                                                             
+
+TABLE_NAME                                                                                          
+----------------------------                                                                        
+COUNTRIES                                                                                           
+
+12 rows selected.
+
+SQL> @./1/apply_balance;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE APPLY_BALANCE:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+3/5      PLS-00103: Encountered the symbol "BALANCE_IN" when expecting one                          
+         of the following:                                                                          
+         ; is with authid as cluster order using external                                           
+         deterministic parallel_enable pipelined result_cache                                       
+                                                                                                    
+SQL> @./1/apply_balance;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE APPLY_BALANCE:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+8/1      PLS-00103: Encountered the symbol "END" when expecting one of the                          
+         following:                                                                                 
+         ;                                                                                          
+         The symbol ";" was substituted for "END" to continue.                                      
+                                                                                                    
+SQL> show error
+Errors for PROCEDURE APPLY_BALANCE:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+8/1      PLS-00103: Encountered the symbol "END" when expecting one of the                          
+         following:                                                                                 
+         ;                                                                                          
+         The symbol ";" was substituted for "END" to continue.                                      
+                                                                                                    
+SQL> @./1/apply_balance;
+
+Procedure created.
+
+SQL> @./1/account_balance;
+
+Function created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> @./1/1_3_2
+ 17  /
+
+Procedure created.
+
+SQL> show error;
+No errors.
+SQL> commit;
+
+Commit complete.
+
+SQL> select table_name from user_tables where NUM_ROWS=0;
+
+TABLE_NAME                                                                                          
+----------------------------                                                                        
+BOOKS                                                                                               
+JOB_HISTORY                                                                                         
+DEPARTMENT_DENORMS                                                                                  
+NESTED_ID_TABLE                                                                                     
+ACCOUNTS                                                                                            
+
+SQL> select 'alter table '||table_name||' allocate extent;' from user_tables where num_rows=0
+  2  ；
+  3  ；
+  4  ／
+  5  
+SQL> select 'alter table '||table_name||' allocate extent;' from user_tables where num_rows=0;
+
+'ALTERTABLE'||TABLE_NAME||'ALLOCATEEXTENT;'                                                         
+-----------------------------------------------------------                                         
+alter table BOOKS allocate extent;                                                                  
+alter table JOB_HISTORY allocate extent;                                                            
+alter table DEPARTMENT_DENORMS allocate extent;                                                     
+alter table NESTED_ID_TABLE allocate extent;                                                        
+alter table ACCOUNTS allocate extent;                                                               
+
+SQL> alter table BOOKS allocate extent;
+alter table BOOKS allocate extent
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired 
+
+
+SQL> alter table JOB_HISTORY allocate extent;
+
+Table altered.
+
+SQL> alter table DEPARTMENT_DENORMS allocate extent;
+
+Table altered.
+
+SQL> alter table NESTED_ID_TABLE allocate extent;
+
+Table altered.
+
+SQL> alter table ACCOUNTS allocate extent;
+
+Table altered.
+
+SQL> conn scott/tiger@orcl;
+Connected.
+SQL> select 'alter table '||table_name||' allocate extent;' from user_tables where num_rows=0;
+
+'ALTERTABLE'||TABLE_NAME||'ALLOCATEEXTENT;'                                                         
+-----------------------------------------------------------                                         
+alter table TESTA allocate extent;                                                                  
+alter table E2 allocate extent;                                                                     
+
+SQL> select table_name from user_tables where NUM_ROWS=0;
+
+TABLE_NAME                                                                                          
+----------------------------                                                                        
+TESTA                                                                                               
+E2                                                                                                  
+
+SQL> alter table TESTA allocate extent;
+
+Table altered.
+
+SQL> alter table E2 allocate extent;
+
+Table altered.
+
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+26/16    PLS-00103: Encountered the symbol "." when expecting one of the                            
+         following:                                                                                 
+         ( ) - + case mod new not null <an identifier>                                              
+         <a double-quoted delimited-identifier> <a bind variable>                                   
+         table continue avg count current exists max min prior sql                                  
+         stddev sum variance execute multiset the both leading                                      
+         trailing forall merge year month day hour minute second                                    
+         timezone_hour timezone_minute timezone_region timezone_abbr                                
+         time timestamp interval date                                                               
+         <a string literal with character set specification>                                        
+                                                                                                    
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+29/20    PLS-00103: Encountered the symbol "." when expecting one of the                            
+         following:                                                                                 
+         ( ) - + case mod new not null <an identifier>                                              
+         <a double-quoted delimited-identifier> <a bind variable>                                   
+         table continue avg count current exists max min prior sql                                  
+         stddev sum variance execute multiset the both leading                                      
+         trailing forall merge year month day hour minute second                                    
+         timezone_hour timezone_minute timezone_region timezone_abbr                                
+         time timestamp interval date                                                               
+         <a string literal with character set specification>                                        
+                                                                                                    
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+29/20    PLS-00103: Encountered the symbol "." when expecting one of the                            
+         following:                                                                                 
+         ( ) - + case mod new not null <an identifier>                                              
+         <a double-quoted delimited-identifier> <a bind variable>                                   
+         table continue avg count current exists max min prior sql                                  
+         stddev sum variance execute multiset the both leading                                      
+         trailing forall merge year month day hour minute second                                    
+         timezone_hour timezone_minute timezone_region timezone_abbr                                
+         time timestamp interval date                                                               
+         <a string literal with character set specification>                                        
+                                                                                                    
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+29/20    PLS-00103: Encountered the symbol "." when expecting one of the                            
+         following:                                                                                 
+         ( ) - + case mod new not null <an identifier>                                              
+         <a double-quoted delimited-identifier> <a bind variable>                                   
+         table continue avg count current exists max min prior sql                                  
+         stddev sum variance execute multiset the both leading                                      
+         trailing forall merge year month day hour minute second                                    
+         timezone_hour timezone_minute timezone_region timezone_abbr                                
+         time timestamp interval date                                                               
+         <a string literal with character set specification>                                        
+                                                                                                    
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+0/0      PL/SQL: Compilation unit analysis terminated                                               
+2/22     PLS-00201: identifier 'ACCOUNTS.ID' must be declared                                       
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> clear scr;
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+0/0      PL/SQL: Compilation unit analysis terminated                                               
+2/22     PLS-00201: identifier 'ACCOUNTS.ID' must be declared                                       
+SQL> desc accounts;
+ERROR:
+ORA-04043: object accounts does not exist 
+
+
+SQL> show user;
+USER is "SCOTT"
+SQL> conn hr/hr@orcl;
+Connected.
+SQL> ls
+SP2-0042: unknown command "ls" - rest of line ignored.
+SQL> desc accounts;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ID                                                             NUMBER(38)
+ NAME                                                           VARCHAR2(100)
+
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+16/5     PL/SQL: Statement ignored                                                                  
+16/17    PLS-00302: component 'PU_LINE' must be declared                                            
+26/5     PL/SQL: Statement ignored                                                                  
+26/5     PLS-00201: identifier 'LOG_ERROR' must be declared                                         
+29/10    PL/SQL: Statement ignored                                                                  
+29/10    PLS-00201: identifier 'LOG_ERROR' must be declared                                         
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+26/5     PL/SQL: Statement ignored                                                                  
+26/5     PLS-00201: identifier 'LOG_ERROR' must be declared                                         
+29/10    PL/SQL: Statement ignored                                                                  
+29/10    PLS-00201: identifier 'LOG_ERROR' must be declared                                         
+SQL> @./1/log_error.sql;
+
+Procedure created.
+
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+26/5     PL/SQL: Statement ignored                                                                  
+26/5     PLS-00306: wrong number or types of arguments in call to                                   
+         'LOG_ERROR'                                                                                
+                                                                                                    
+29/10    PL/SQL: Statement ignored                                                                  
+29/10    PLS-00306: wrong number or types of arguments in call to                                   
+         'LOG_ERROR'                                                                                
+                                                                                                    
+SQL> show error
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+26/5     PL/SQL: Statement ignored                                                                  
+26/5     PLS-00306: wrong number or types of arguments in call to                                   
+         'LOG_ERROR'                                                                                
+                                                                                                    
+29/10    PL/SQL: Statement ignored                                                                  
+29/10    PLS-00306: wrong number or types of arguments in call to                                   
+         'LOG_ERROR'                                                                                
+                                                                                                    
+SQL> @./1/1_3_3_check_account;
+
+Procedure created.
+
+SQL> @./1/log_error.sql;
+
+Procedure created.
+
+SQL> @./1/1_3_3_check_account;
+
+Procedure created.
+
+SQL> show error;
+No errors.
+SQL> select object_name from user_objects;
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+LOG_ERROR                                                                                           
+CHECK_ACCOUNT                                                                                       
+APPLY_BALANCE                                                                                       
+PAY_OUT_BALANCE                                                                                     
+ACCOUNT_BALANCE                                                                                     
+ACCOUNTS                                                                                            
+HR_JUST_NAMES                                                                                       
+DENORM_DEMO_PKG                                                                                     
+DENORM_DEMO_PKG                                                                                     
+SYS_LOB0000079583C00003$$                                                                           
+SYS_C0015251                                                                                        
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+SYS_FK0000079583N00004$                                                                             
+NESTED_ID_TABLE                                                                                     
+DEPARTMENT_DENORMS                                                                                  
+UC_EMPLOYEE_NAMES_VAT                                                                               
+EMPLOYEE_IDS_NTT                                                                                    
+JHIST_DEPARTMENT_IX                                                                                 
+JHIST_EMPLOYEE_IX                                                                                   
+JHIST_JOB_IX                                                                                        
+JHIST_EMP_ID_ST_DATE_PK                                                                             
+JOB_HISTORY                                                                                         
+BOOKS                                                                                               
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+REG_ID_PK                                                                                           
+REGIONS                                                                                             
+LOC_COUNTRY_IX                                                                                      
+LOC_STATE_PROVINCE_IX                                                                               
+LOC_CITY_IX                                                                                         
+LOC_ID_PK                                                                                           
+LOCATIONS                                                                                           
+SYS_C0014969                                                                                        
+JOB_EMP                                                                                             
+JOB_ID_PK                                                                                           
+JOBS                                                                                                
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+EMP_NAME_IX                                                                                         
+EMP_MANAGER_IX                                                                                      
+EMP_JOB_IX                                                                                          
+EMP_DEPARTMENT_IX                                                                                   
+EMP_EMP_ID_PK                                                                                       
+EMP_EMAIL_UK                                                                                        
+EMPLOYEES                                                                                           
+DEPT_LOCATION_IX                                                                                    
+DEPT_ID_PK                                                                                          
+DEPARTMENTS                                                                                         
+COUNTRY_C_ID_PK                                                                                     
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+COUNTRIES                                                                                           
+EMPLOYEES_SEQ                                                                                       
+DEPARTMENTS_SEQ                                                                                     
+LOCATIONS_SEQ                                                                                       
+UPDATE_JOB_HISTORY                                                                                  
+SECURE_EMPLOYEES                                                                                    
+ADD_JOB_HISTORY                                                                                     
+SECURE_DML                                                                                          
+
+52 rows selected.
+
+SQL> select object_name, object_type from  user_objects
+  2  where object_type =
+  3  'PROCEDURE';
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+SECURE_DML                PROCEDURE                                                                 
+PAY_OUT_BALANCE           PROCEDURE                                                                 
+LOG_ERROR                 PROCEDURE                                                                 
+CHECK_ACCOUNT             PROCEDURE                                                                 
+APPLY_BALANCE             PROCEDURE                                                                 
+ADD_JOB_HISTORY           PROCEDURE                                                                 
+
+6 rows selected.
+
+SQL> exec check_account(30);
+
+PL/SQL procedure successfully completed.
+
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> @./1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error;
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+2

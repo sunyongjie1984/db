@@ -1,4 +1,4 @@
-procedure pay_out_balance(
+create or replace procedure pay_out_balance(
     account_id_in in accounts.id%type)
 is
     l_balance_remaining number;

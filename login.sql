@@ -4,6 +4,7 @@ set linesize 100;
 -- set pause on;
 
 set serveroutput on;
+set sqlprompt "_USER'@'_CONNECT_IDENTIFIER > "
 -- set echo on;
 
 define _EDITOR = vi;

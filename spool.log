@@ -1,0 +1,332 @@
+SQL> show user
+USER is "SCOTT"
+SQL> begin
+  2  dbms_output.put_line('hello');
+  3  end;
+  4  /
+hello                                                                                               
+
+PL/SQL procedure successfully completed.
+
+SQL> exit
+OPP6@orcl > pwd
+SP2-0042: unknown command "pwd" - rest of line ignored.
+OPP6@orcl > select * form tabs;
+select * form tabs
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+OPP6@orcl > select table_name from user_objects;
+select table_name from user_objects
+       *
+ERROR at line 1:
+ORA-00904: "TABLE_NAME": invalid identifier 
+
+
+OPP6@orcl > select table_name from user_objects;
+select table_name from user_objects
+       *
+ERROR at line 1:
+ORA-00904: "TABLE_NAME": invalid identifier 
+
+
+OPP6@orcl > desc user_objects;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ OBJECT_NAME                                                    VARCHAR2(128)
+ SUBOBJECT_NAME                                                 VARCHAR2(30)
+ OBJECT_ID                                                      NUMBER
+ DATA_OBJECT_ID                                                 NUMBER
+ OBJECT_TYPE                                                    VARCHAR2(19)
+ CREATED                                                        DATE
+ LAST_DDL_TIME                                                  DATE
+ TIMESTAMP                                                      VARCHAR2(19)
+ STATUS                                                         VARCHAR2(7)
+ TEMPORARY                                                      VARCHAR2(1)
+ GENERATED                                                      VARCHAR2(1)
+ SECONDARY                                                      VARCHAR2(1)
+ NAMESPACE                                                      NUMBER
+ EDITION_NAME                                                   VARCHAR2(30)
+
+OPP6@orcl > select object_name from user_objects;
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+REGIONS                                                                                             
+COUNTRIES                                                                                           
+COUNTRY_C_ID_PK                                                                                     
+LOCATIONS                                                                                           
+DEPARTMENTS                                                                                         
+JOBS                                                                                                
+EMPLOYEES                                                                                           
+JOB_HISTORY                                                                                         
+DEPT_ID_PK                                                                                          
+DEPT_LOCATION_IX                                                                                    
+EMP_EMAIL_UK                                                                                        
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+EMP_EMP_ID_PK                                                                                       
+EMP_DEPARTMENT_IX                                                                                   
+EMP_JOB_IX                                                                                          
+EMP_MANAGER_IX                                                                                      
+EMP_NAME_IX                                                                                         
+JOB_ID_PK                                                                                           
+JHIST_EMP_ID_ST_DATE_PK                                                                             
+JHIST_JOB_IX                                                                                        
+JHIST_EMPLOYEE_IX                                                                                   
+JHIST_DEPARTMENT_IX                                                                                 
+LOC_ID_PK                                                                                           
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+LOC_CITY_IX                                                                                         
+LOC_STATE_PROVINCE_IX                                                                               
+LOC_COUNTRY_IX                                                                                      
+REG_ID_PK                                                                                           
+EMPLOYEE_IDS_NTT                                                                                    
+UC_EMPLOYEE_NAMES_VAT                                                                               
+DEPARTMENT_DENORMS                                                                                  
+NESTED_ID_TABLE                                                                                     
+SYS_FK0000081264N00004$                                                                             
+SYS_C0016563                                                                                        
+SYS_LOB0000081264C00003$$                                                                           
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+DENORM_DEMO_PKG                                                                                     
+DENORM_DEMO_PKG                                                                                     
+HR_JUST_NAMES                                                                                       
+
+36 rows selected.
+
+OPP6@orcl > desc books;
+ERROR:
+ORA-04043: object books does not exist 
+
+
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_book;
+SP2-0310: unable to open file "/Users/jack/git/db/opp6/1/create_table_book.sql"
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+create table books (author varchar2(100)
+                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+create table books (author varchar2(100)
+                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+OPP6@orcl > ed
+Wrote file afiedt.buf
+
+  1* create table books (author varchar2(100));
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+create table books (author varchar2(100)
+                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+create table books (author varchar2(100)
+                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+OPP6@orcl > /
+create table books (author varchar2(100)
+                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+OPP6@orcl > ed
+Wrote file afiedt.buf
+
+  1* create table books (author varchar2(100));
+OPP6@orcl > /
+create table books (author varchar2(100));
+                                         *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+
+Table created.
+
+create table books (author varchar2(100))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+OPP6@orcl > select * from books;
+
+no rows selected
+
+OPP6@orcl > drop table books;
+
+Table dropped.
+
+OPP6@orcl > commit;
+
+Commit complete.
+
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+
+Table created.
+
+create table books (author varchar2(100))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+OPP6@orcl > drop books;
+drop books
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option 
+
+
+OPP6@orcl > drom table books;
+SP2-0734: unknown command beginning "drom table..." - rest of line ignored.
+OPP6@orcl > drop table books;
+
+Table dropped.
+
+OPP6@orcl > select * from books;
+select * from books
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+
+Table created.
+
+create table books (author varchar2(100))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+create table books (author varchar2(100))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+create table books (author varchar2(100))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+OPP6@orcl > select * from  books;
+
+no rows selected
+
+OPP6@orcl > desc books;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ AUTHOR                                                         VARCHAR2(100)
+
+OPP6@orcl > drop table books;
+
+Table dropped.
+
+OPP6@orcl > desc books;
+ERROR:
+ORA-04043: object books does not exist 
+
+
+OPP6@orcl > commit;
+
+Commit complete.
+
+OPP6@orcl > desc books;
+ERROR:
+ORA-04043: object books does not exist 
+
+
+OPP6@orcl > @/Users/jack/git/db/opp6/1/create_table_books;
+
+Table created.
+
+create table books (author varchar2(100))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+OPP6@orcl > conn hr/hr
+ERROR:
+ORA-12162: TNS:net service name is incorrectly specified 
+
+
+Warning: You are no longer connected to ORACLE.
+@ > conn hr/hr@orcl
+Connected.
+HR@orcl > show user
+USER is "HR"
+HR@orcl > desc books;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ISBN                                                  NOT NULL VARCHAR2(13)
+ TITLE                                                          VARCHAR2(200)
+ SUMMARY                                                        VARCHAR2(2000)
+ AUTHOR                                                         VARCHAR2(200)
+ DATE_PUBLISHED                                                 DATE
+ PAGE_COUNT                                                     NUMBER
+
+HR@orcl > select wordcount('luckly') from dual;
+
+WORDCOUNT('LUCKLY')                                                                                 
+-------------------                                                                                 
+                  1                                                                                 
+
+HR@orcl > conn scott/tiger@orcl
+Connected.
+SCOTT@orcl > show user
+USER is "SCOTT"
+SCOTT@orcl > select wordcount('luckly') from dual;
+select wordcount('luckly') from dual
+       *
+ERROR at line 1:
+ORA-00904: "WORDCOUNT": invalid identifier 
+
+
+SCOTT@orcl > select hr.wordcount('luckly') from dual;
+
+HR.WORDCOUNT('LUCKLY')                                                                              
+----------------------                                                                              
+                     1                                                                              
+
+SCOTT@orcl > select * from user_role_privs;
+
+USERNAME                       GRANTED_ROLE                   ADM DEF OS_                           
+------------------------------ ------------------------------ --- --- ---                           
+SCOTT                          CONNECT                        NO  YES NO                            
+SCOTT                          DBA                            NO  YES NO                            
+SCOTT                          RESOURCE                       NO  YES NO                            
+
+SCOTT@orcl > conn sys/manager@orcl as sysdba;
+Connected.
+SYS@orcl > show user
+USER is "SYS"
+SYS@orcl > revoke dba from scott;
+
+Revoke succeeded.
+
+SYS@orcl > conn scott/tiger@orcl
+Connected.

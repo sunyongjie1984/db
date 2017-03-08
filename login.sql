@@ -8,6 +8,7 @@ set sqlprompt "_USER'@'_CONNECT_IDENTIFIER > "
 -- set echo on;
 
 define _EDITOR = vi;
+set SQLPROMPT "_USER'@'_CONNECT_IDENTIFIER >";
 
 col name format a10;
 col prod_name format a25;

@@ -330,3 +330,19 @@ Revoke succeeded.
 
 SYS@orcl > conn scott/tiger@orcl
 Connected.
+SCOTT@orcl > select * from user_role_privs;
+
+USERNAME                       GRANTED_ROLE                   ADM DEF OS_                           
+------------------------------ ------------------------------ --- --- ---                           
+SCOTT                          CONNECT                        NO  YES NO                            
+SCOTT                          RESOURCE                       NO  YES NO                            
+
+SCOTT@orcl > select hr.wordcount('luckly') from dual;
+select hr.wordcount('luckly') from dual
+          *
+ERROR at line 1:
+ORA-00904: : invalid identifier 
+
+
+SCOTT@orcl > conn opp6/opp6@orcl
+Connected.

@@ -394,3 +394,127 @@ HR_JUST_NAMES             VIEW
 41 rows selected.
 
 OPP6@orcl >quit
+OPP6@orcl >@2/create_wordcount;
+
+Function created.
+
+OPP6@orcl >@2/create_wordcount;
+
+Warning: Function created with compilation errors.
+
+OPP6@orcl >show err
+Errors for FUNCTION WORDCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+11/13    PL/SQL: Statement ignored                                                                  
+11/16    PLS-00201: identifier 'INSIDE_A_WORD' must be declared                                     
+17/13    PL/SQL: Statement ignored                                                                  
+17/13    PLS-00201: identifier 'INSIDE_A_WORD' must be declared                                     
+20/5     PL/SQL: Statement ignored                                                                  
+20/12    PLS-00201: identifier 'WORDS' must be declared                                             
+OPP6@orcl >show error;
+Errors for FUNCTION WORDCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+11/13    PL/SQL: Statement ignored                                                                  
+11/16    PLS-00201: identifier 'INSIDE_A_WORD' must be declared                                     
+17/13    PL/SQL: Statement ignored                                                                  
+17/13    PLS-00201: identifier 'INSIDE_A_WORD' must be declared                                     
+20/5     PL/SQL: Statement ignored                                                                  
+20/12    PLS-00201: identifier 'WORDS' must be declared                                             
+OPP6@orcl >clear scr;
+OPP6@orcl >show error;
+Errors for FUNCTION WORDCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+11/13    PL/SQL: Statement ignored                                                                  
+11/16    PLS-00201: identifier 'INSIDE_A_WORD' must be declared                                     
+17/13    PL/SQL: Statement ignored                                                                  
+17/13    PLS-00201: identifier 'INSIDE_A_WORD' must be declared                                     
+20/5     PL/SQL: Statement ignored                                                                  
+20/12    PLS-00201: identifier 'WORDS' must be declared                                             
+OPP6@orcl >@2/create_wordcount;
+
+Warning: Function created with compilation errors.
+
+OPP6@orcl >show error;
+Errors for FUNCTION WORDCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+13/17    PL/SQL: Statement ignored                                                                  
+13/17    PLS-00201: identifier 'WORDS' must be declared                                             
+20/5     PL/SQL: Statement ignored                                                                  
+20/12    PLS-00201: identifier 'WORDS' must be declared                                             
+OPP6@orcl >@2/create_wordcount;
+
+Function created.
+
+OPP6@orcl >select * from books;
+
+AUTHOR                                                                                              
+----------------------------------------------------------------------------------------------------
+sunyj                                                                                               
+
+OPP6@orcl >select *, countword(author) from books;
+select *, countword(author) from books
+        *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+OPP6@orcl >select countword(author) from books;OPP6@orcl >select wordcount('hello hi ni hao') from dual;
+
+WORDCOUNT('HELLOHINIHAO')                                                                           
+-------------------------                                                                           
+                        4                                                                           
+
+OPP6@orcl >conn customer/customer@orcl;
+Connected.
+CUSTOMER@orcl >select count(*) from user_tables;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+       485                                                                                          
+
+CUSTOMER@orcl >select count(*) from user_objects;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+      1878                                                                                          
+
+CUSTOMER@orcl >select count(*) from user_objects;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+      1878                                                                                          
+
+CUSTOMER@orcl >select count(*) from user_objects;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+      1878                                                                                          
+
+CUSTOMER@orcl >select count(*) from user_objects;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+      1878                                                                                          
+
+CUSTOMER@orcl >select count(*) from user_objects;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+      1878                                                                                          
+
+CUSTOMER@orcl >select count(*) from user_objects;
+
+  COUNT(*)                                                                                          
+----------                                                                                          
+      1878                                                                                          
+
+CUSTOMER@orcl >conn opp6/opp5@orcl;
+Connected.

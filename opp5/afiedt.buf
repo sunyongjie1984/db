@@ -1,0 +1,4 @@
+begin
+dbms_output.put_line('there are ' || wordcount(chr(9)) || ' words in a tab');
+end;
+/

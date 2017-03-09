@@ -1,0 +1,377 @@
+OPP6@orcl >show user;
+USER is "OPP6"
+OPP6@orcl >select table_name from user_objects;
+select table_name from user_objects
+       *
+ERROR at line 1:
+ORA-00904: "TABLE_NAME": invalid identifier 
+
+
+OPP6@orcl >select object_name from user_objects;
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+BOOKS                                                                                               
+HR_JUST_NAMES                                                                                       
+DENORM_DEMO_PKG                                                                                     
+DENORM_DEMO_PKG                                                                                     
+SYS_LOB0000081264C00003$$                                                                           
+SYS_C0016563                                                                                        
+SYS_FK0000081264N00004$                                                                             
+NESTED_ID_TABLE                                                                                     
+DEPARTMENT_DENORMS                                                                                  
+UC_EMPLOYEE_NAMES_VAT                                                                               
+EMPLOYEE_IDS_NTT                                                                                    
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+REG_ID_PK                                                                                           
+LOC_COUNTRY_IX                                                                                      
+LOC_STATE_PROVINCE_IX                                                                               
+LOC_CITY_IX                                                                                         
+LOC_ID_PK                                                                                           
+JHIST_DEPARTMENT_IX                                                                                 
+JHIST_EMPLOYEE_IX                                                                                   
+JHIST_JOB_IX                                                                                        
+JHIST_EMP_ID_ST_DATE_PK                                                                             
+JOB_ID_PK                                                                                           
+EMP_NAME_IX                                                                                         
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+EMP_MANAGER_IX                                                                                      
+EMP_JOB_IX                                                                                          
+EMP_DEPARTMENT_IX                                                                                   
+EMP_EMP_ID_PK                                                                                       
+EMP_EMAIL_UK                                                                                        
+DEPT_LOCATION_IX                                                                                    
+DEPT_ID_PK                                                                                          
+JOB_HISTORY                                                                                         
+EMPLOYEES                                                                                           
+JOBS                                                                                                
+DEPARTMENTS                                                                                         
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+LOCATIONS                                                                                           
+COUNTRY_C_ID_PK                                                                                     
+COUNTRIES                                                                                           
+REGIONS                                                                                             
+
+37 rows selected.
+
+OPP6@orcl >select object_name from user_objects
+  2  where object_type = 'procedure';
+
+no rows selected
+
+OPP6@orcl >where object_type = 'PROCEDURE';
+SP2-0734: unknown command beginning "where obje..." - rest of line ignored.
+OPP6@orcl >select object_name from user_objects
+  2  where object_type = 'PROCEDURE';
+
+no rows selected
+
+OPP6@orcl >desc books;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ AUTHOR                                                         VARCHAR2(100)
+
+OPP6@orcl >select * from books;
+
+AUTHOR                                                                                              
+----------------------------------------------------------------------------------------------------
+sunyj                                                                                               
+
+OPP6@orcl >desc accounts;
+ERROR:
+ORA-04043: object accounts does not exist 
+
+
+OPP6@orcl >@1/create_table_accounts;
+
+Table created.
+
+OPP6@orcl >desc accounts;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ID                                                             NUMBER(38)
+ NAME                                                           VARCHAR2(100)
+
+OPP6@orcl >@1/log_error;
+
+Procedure created.
+
+OPP6@orcl >@1/1_3_3_check_account;
+
+Warning: Procedure created with compilation errors.
+
+OPP6@orcl >show error;
+Errors for PROCEDURE CHECK_ACCOUNT:
+
+LINE/COL ERROR                                                                                      
+-------- -----------------------------------------------------------------                          
+14/5     PL/SQL: Statement ignored                                                                  
+14/28    PLS-00201: identifier 'ACCOUNT_BALANCE' must be declared                                   
+OPP6@orcl >@1/create_account_balance;
+
+Function created.
+
+OPP6@orcl >@1/1_3_3_check_account;
+
+Procedure created.
+
+OPP6@orcl >select object_name from usr_objects;
+select object_name from usr_objects
+                        *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+OPP6@orcl >select object_name from user_objects;
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+BOOKS                                                                                               
+HR_JUST_NAMES                                                                                       
+DENORM_DEMO_PKG                                                                                     
+DENORM_DEMO_PKG                                                                                     
+SYS_LOB0000081264C00003$$                                                                           
+SYS_C0016563                                                                                        
+SYS_FK0000081264N00004$                                                                             
+NESTED_ID_TABLE                                                                                     
+DEPARTMENT_DENORMS                                                                                  
+UC_EMPLOYEE_NAMES_VAT                                                                               
+EMPLOYEE_IDS_NTT                                                                                    
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+REG_ID_PK                                                                                           
+LOC_COUNTRY_IX                                                                                      
+LOC_STATE_PROVINCE_IX                                                                               
+LOC_CITY_IX                                                                                         
+LOC_ID_PK                                                                                           
+JHIST_DEPARTMENT_IX                                                                                 
+JHIST_EMPLOYEE_IX                                                                                   
+JHIST_JOB_IX                                                                                        
+JHIST_EMP_ID_ST_DATE_PK                                                                             
+JOB_ID_PK                                                                                           
+EMP_NAME_IX                                                                                         
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+EMP_MANAGER_IX                                                                                      
+EMP_JOB_IX                                                                                          
+EMP_DEPARTMENT_IX                                                                                   
+EMP_EMP_ID_PK                                                                                       
+EMP_EMAIL_UK                                                                                        
+DEPT_LOCATION_IX                                                                                    
+DEPT_ID_PK                                                                                          
+JOB_HISTORY                                                                                         
+EMPLOYEES                                                                                           
+JOBS                                                                                                
+DEPARTMENTS                                                                                         
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+LOCATIONS                                                                                           
+COUNTRY_C_ID_PK                                                                                     
+COUNTRIES                                                                                           
+REGIONS                                                                                             
+ACCOUNT_BALANCE                                                                                     
+CHECK_ACCOUNT                                                                                       
+LOG_ERROR                                                                                           
+ACCOUNTS                                                                                            
+
+41 rows selected.
+
+OPP6@orcl >set pause on;
+OPP6@orcl >select object_name from user_objects;
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+BOOKS                                                                                               
+HR_JUST_NAMES                                                                                       
+DENORM_DEMO_PKG                                                                                     
+DENORM_DEMO_PKG                                                                                     
+SYS_LOB0000081264C00003$$                                                                           
+SYS_C0016563                                                                                        
+SYS_FK0000081264N00004$                                                                             
+NESTED_ID_TABLE                                                                                     
+DEPARTMENT_DENORMS                                                                                  
+UC_EMPLOYEE_NAMES_VAT                                                                               
+EMPLOYEE_IDS_NTT                                                                                    
+
+OBJECT_NAME                                                                                         
+-------------------------                                                                           
+REG_ID_PK                                                                                           
+LOC_COUNTRY_IX                                                                                      
+LOC_STATE_PROVINCE_IX                                                                               
+LOC_CITY_IX                                                                                         
+LOC_ID_PK                                                                                           
+JHIST_DEPARTMENT_IX                                                                                 
+JHIST_EMPLOYEE_IX                                                                                   
+JHIST_JOB_IX                                                                                        
+JHIST_EMP_ID_ST_DATE_PK                                                                             
+JOB_ID_PK                                                                                           
+EMP_NAME_IX                                                                                         
+
+EMP_MANAGER_IX                                                                                      
+
+24 rows selected.
+
+
+OPP6@orcl >select object_name, object_type from user_objects order by object_type;
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+ACCOUNT_BALANCE           FUNCTION                                                                  
+LOC_ID_PK                 INDEX                                                                     
+DEPT_ID_PK                INDEX                                                                     
+JHIST_EMPLOYEE_IX         INDEX                                                                     
+JHIST_JOB_IX              INDEX                                                                     
+SYS_C0016563              INDEX                                                                     
+COUNTRY_C_ID_PK           INDEX                                                                     
+SYS_FK0000081264N00004$   INDEX                                                                     
+REG_ID_PK                 INDEX                                                                     
+LOC_COUNTRY_IX            INDEX                                                                     
+LOC_STATE_PROVINCE_IX     INDEX                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+LOC_CITY_IX               INDEX                                                                     
+JHIST_DEPARTMENT_IX       INDEX                                                                     
+DEPT_LOCATION_IX          INDEX                                                                     
+EMP_EMAIL_UK              INDEX                                                                     
+EMP_EMP_ID_PK             INDEX                                                                     
+EMP_DEPARTMENT_IX         INDEX                                                                     
+EMP_JOB_IX                INDEX                                                                     
+EMP_MANAGER_IX            INDEX                                                                     
+EMP_NAME_IX               INDEX                                                                     
+JOB_ID_PK                 INDEX                                                                     
+JHIST_EMP_ID_ST_DATE_PK   INDEX                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+SYS_LOB0000081264C00003$$ LOB                                                                       
+DENORM_DEMO_PKG           PACKAGE                                                                   
+DENORM_DEMO_PKG           PACKAGE BODY                                                              
+CHECK_ACCOUNT             PROCEDURE                                                                 
+LOG_ERROR                 PROCEDURE                                                                 
+EMPLOYEES                 TABLE                                                                     
+JOBS                      TABLE                                                                     
+DEPARTMENTS               TABLE                                                                     
+NESTED_ID_TABLE           TABLE                                                                     
+ACCOUNTS                  TABLE                                                                     
+BOOKS                     TABLE                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+DEPARTMENT_DENORMS        TABLE                                                                     
+JOB_HISTORY               TABLE                                                                     
+LOCATIONS                 TABLE                                                                     
+COUNTRIES                 TABLE                                                                     
+REGIONS                   TABLE                                                                     
+UC_EMPLOYEE_NAMES_VAT     TYPE                                                                      
+EMPLOYEE_IDS_NTT          TYPE                                                                      
+HR_JUST_NAMES             VIEW                                                                      
+
+41 rows selected.
+
+OPP6@orcl >select object_name, object_type from user_objects order by object_type;
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+ACCOUNT_BALANCE           FUNCTION                                                                  
+LOC_ID_PK                 INDEX                                                                     
+DEPT_ID_PK                INDEX                                                                     
+JHIST_EMPLOYEE_IX         INDEX                                                                     
+JHIST_JOB_IX              INDEX                                                                     
+SYS_C0016563              INDEX                                                                     
+COUNTRY_C_ID_PK           INDEX                                                                     
+SYS_FK0000081264N00004$   INDEX                                                                     
+REG_ID_PK                 INDEX                                                                     
+LOC_COUNTRY_IX            INDEX                                                                     
+LOC_STATE_PROVINCE_IX     INDEX                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+LOC_CITY_IX               INDEX                                                                     
+JHIST_DEPARTMENT_IX       INDEX                                                                     
+DEPT_LOCATION_IX          INDEX                                                                     
+EMP_EMAIL_UK              INDEX                                                                     
+EMP_EMP_ID_PK             INDEX                                                                     
+EMP_DEPARTMENT_IX         INDEX                                                                     
+EMP_JOB_IX                INDEX                                                                     
+EMP_MANAGER_IX            INDEX                                                                     
+EMP_NAME_IX               INDEX                                                                     
+JOB_ID_PK                 INDEX                                                                     
+JHIST_EMP_ID_ST_DATE_PK   INDEX                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+SYS_LOB0000081264C00003$$ LOB                                                                       
+DENORM_DEMO_PKG           PACKAGE                                                                   
+DENORM_DEMO_PKG           PACKAGE BODY                                                              
+CHECK_ACCOUNT             PROCEDURE                                                                 
+LOG_ERROR                 PROCEDURE                                                                 
+EMPLOYEES                 TABLE                                                                     
+JOBS                      TABLE                                                                     
+DEPARTMENTS               TABLE                                                                     
+NESTED_ID_TABLE           TABLE                                                                     
+ACCOUNTS                  TABLE                                                                     
+BOOKS                     TABLE                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+DEPARTMENT_DENORMS        TABLE                                                                     
+JOB_HISTORY               TABLE                                                                     
+LOCATIONS                 TABLE                                                                     
+COUNTRIES                 TABLE                                                                     
+REGIONS                   TABLE                                                                     
+UC_EMPLOYEE_NAMES_VAT     TYPE                                                                      
+EMPLOYEE_IDS_NTT          TYPE                                                                      
+HR_JUST_NAMES             VIEW                                                                      
+
+41 rows selected.
+
+OPP6@orcl >set pause off;
+OPP6@orcl >select object_name, object_type from user_objects order by object_type;
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+ACCOUNT_BALANCE           FUNCTION                                                                  
+EMP_DEPARTMENT_IX         INDEX                                                                     
+COUNTRY_C_ID_PK           INDEX                                                                     
+EMP_JOB_IX                INDEX                                                                     
+EMP_MANAGER_IX            INDEX                                                                     
+SYS_C0016563              INDEX                                                                     
+SYS_FK0000081264N00004$   INDEX                                                                     
+DEPT_ID_PK                INDEX                                                                     
+DEPT_LOCATION_IX          INDEX                                                                     
+EMP_EMAIL_UK              INDEX                                                                     
+EMP_EMP_ID_PK             INDEX                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+REG_ID_PK                 INDEX                                                                     
+LOC_COUNTRY_IX            INDEX                                                                     
+LOC_STATE_PROVINCE_IX     INDEX                                                                     
+LOC_CITY_IX               INDEX                                                                     
+LOC_ID_PK                 INDEX                                                                     
+JHIST_DEPARTMENT_IX       INDEX                                                                     
+JHIST_EMPLOYEE_IX         INDEX                                                                     
+JHIST_JOB_IX              INDEX                                                                     
+JHIST_EMP_ID_ST_DATE_PK   INDEX                                                                     
+JOB_ID_PK                 INDEX                                                                     
+EMP_NAME_IX               INDEX                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+SYS_LOB0000081264C00003$$ LOB                                                                       
+DENORM_DEMO_PKG           PACKAGE                                                                   
+DENORM_DEMO_PKG           PACKAGE BODY                                                              
+LOG_ERROR                 PROCEDURE                                                                 
+CHECK_ACCOUNT             PROCEDURE                                                                 
+DEPARTMENT_DENORMS        TABLE                                                                     
+NESTED_ID_TABLE           TABLE                    

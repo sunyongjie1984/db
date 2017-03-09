@@ -346,3 +346,20 @@ ORA-00904: : invalid identifier
 
 SCOTT@orcl > conn opp6/opp6@orcl
 Connected.
+OPP6@orcl >select * from books;
+
+no rows selected
+
+OPP6@orcl >select * from books;
+
+AUTHOR                                                                                              
+----------------------------------------------------------------------------------------------------
+sunyj                                                                                               
+
+OPP6@orcl >select * from books;
+
+AUTHOR                                                                                              
+----------------------------------------------------------------------------------------------------
+sunyj                                                                                               
+
+OPP6@orcl >exit

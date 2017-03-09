@@ -374,4 +374,23 @@ DENORM_DEMO_PKG           PACKAGE BODY
 LOG_ERROR                 PROCEDURE                                                                 
 CHECK_ACCOUNT             PROCEDURE                                                                 
 DEPARTMENT_DENORMS        TABLE                                                                     
-NESTED_ID_TABLE           TABLE                    
+NESTED_ID_TABLE           TABLE                                                                     
+JOB_HISTORY               TABLE                                                                     
+EMPLOYEES                 TABLE                                                                     
+JOBS                      TABLE                                                                     
+DEPARTMENTS               TABLE                                                                     
+
+OBJECT_NAME               OBJECT_TYPE                                                               
+------------------------- -------------------                                                       
+LOCATIONS                 TABLE                                                                     
+ACCOUNTS                  TABLE                                                                     
+BOOKS                     TABLE                                                                     
+COUNTRIES                 TABLE                                                                     
+REGIONS                   TABLE                                                                     
+UC_EMPLOYEE_NAMES_VAT     TYPE                                                                      
+EMPLOYEE_IDS_NTT          TYPE                                                                      
+HR_JUST_NAMES             VIEW                                                                      
+
+41 rows selected.
+
+OPP6@orcl >quit

@@ -45,5 +45,6 @@ col accountcode format a20;
 col email format a20;
 col telephone format a20;
 col mobilephone format a20;
+col vc_name format a30;
 col mobilephone format a20;
 col mobilephone format a20;

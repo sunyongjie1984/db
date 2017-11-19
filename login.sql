@@ -1,7 +1,7 @@
 -- set pagesize 30;
 spool spool.log app;
 set linesize 200;
--- set pause on;
+set pause on;
 
 set serveroutput on;
 set sqlprompt "_USER'@'_CONNECT_IDENTIFIER > "
@@ -48,3 +48,4 @@ col mobilephone format a20;
 col vc_name format a30;
 col mobilephone format a20;
 col mobilephone format a20;
+col PROD_DESC format a30;

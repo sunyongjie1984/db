@@ -1,5 +1,5 @@
 -- set pagesize 30;
-spool spool.log app;
+spool ~/spool.log app;
 set linesize 200;
 set pause on;
 

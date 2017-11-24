@@ -1,7 +1,8 @@
 -- set pagesize 30;
 -- spool spool.log app;
 set linesize 100;
-set pause on;
+-- set pause on;
+set trim on;
 
 set serveroutput on;
 set sqlprompt "_USER'@'_CONNECT_IDENTIFIER > "
@@ -11,6 +12,9 @@ define _EDITOR = vi;
 set SQLPROMPT "_USER'@'_CONNECT_IDENTIFIER >";
 
 col name format a10;
+col cname format a20;
+col ccontact format a30;
+col sname format a20;
 col prod_name format a25;
 col Name format a30;
 col cust_name format a30;

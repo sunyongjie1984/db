@@ -1,6 +1,6 @@
 -- set pagesize 30;
-spool ~/spool.log app;
-set linesize 200;
+-- spool spool.log app;
+set linesize 100;
 set pause on;
 
 set serveroutput on;
@@ -13,7 +13,9 @@ set SQLPROMPT "_USER'@'_CONNECT_IDENTIFIER >";
 col name format a10;
 col prod_name format a25;
 col Name format a30;
-col Name format a10;
+col cust_name format a30;
+col cust_address format a30;
+col cust_contact format a30;
 col depcode format a20;
 col depname format a20;
 -- col id format a30;
@@ -49,3 +51,4 @@ col vc_name format a30;
 col mobilephone format a20;
 col mobilephone format a20;
 col PROD_DESC format a30;
+col productsName format a30;

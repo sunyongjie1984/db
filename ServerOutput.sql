@@ -1,4 +1,4 @@
-set serveroutput on;
+-- set serveroutput on;
 declare
 a number := 100;
 begin

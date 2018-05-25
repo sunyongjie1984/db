@@ -1,5 +1,5 @@
 -- set pagesize 30;
--- spool spool.log app;
+spool "C:\Users\win7-yongjis\Desktop\db\spool.log" app;
 set linesize 300;
 set pause on;
 set trim on;

@@ -6,3 +6,11 @@ spool.log
 orcl_scott.dmp
 orcl_scott.dmp
 *.dmp
+
+afiedt.buf
+
+*.swp
+
+*.log
+
+*.log

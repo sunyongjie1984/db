@@ -11550,3 +11550,240 @@ PL/SQL 过程已成功完成。
 
 会话已更改。
 
+SCOTT@192.168.0.118:1521/orcl >show user;
+USER is "SCOTT"
+SCOTT@192.168.0.118:1521/orcl >exit
+SCOTT@orcl2 >quit
+SCOTT@orcl2 >desc emp
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ EMPNO                                                 NOT NULL NUMBER(4)
+ ENAME                                                          VARCHAR2(10)
+ JOB                                                            VARCHAR2(9)
+ MGR                                                            NUMBER(4)
+ HIREDATE                                                       DATE
+ SAL                                                            NUMBER(7,2)
+ COMM                                                           NUMBER(7,2)
+ DEPTNO                                                         NUMBER(2)
+
+SCOTT@orcl2 >select t1.deptno, max( t1.sql )
+  2  from emp
+  3  t1
+  4  where /
+  5  /
+where /
+      *
+ERROR at line 4:
+ORA-00936: missing expression 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno, max( t1.sql ) max_sal
+  2      from emp t1
+  3*     group by t1.deptno
+SCOTT@orcl2 >/
+select t1.deptno, max( t1.sql ) max_sal
+                       *
+ERROR at line 1:
+ORA-00904: "T1"."SQL": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno, max( t1.sal ) max_sal
+  2      from emp t1
+  3*     group by t1.deptno
+SCOTT@orcl2 >/
+
+    DEPTNO    MAX_SAL                                                                               
+---------- ----------                                                                               
+        30       2850                                                                               
+        20       3000                                                                               
+        10       5000                                                                               
+
+
+Execution Plan
+----------------------------------------------------------                                          
+Plan hash value: 4067220884                                                                         
+                                                                                                    
+---------------------------------------------------------------------------                         
+| Id  | Operation          | Name | Rows  | Bytes | Cost (%CPU)| Time     |                         
+---------------------------------------------------------------------------                         
+|   0 | SELECT STATEMENT   |      |     3 |    21 |     4  (25)| 00:00:01 |                         
+|   1 |  HASH GROUP BY     |      |     3 |    21 |     4  (25)| 00:00:01 |                         
+|   2 |   TABLE ACCESS FULL| EMP  |    14 |    98 |     3   (0)| 00:00:01 |                         
+---------------------------------------------------------------------------                         
+
+
+Statistics
+----------------------------------------------------------                                          
+100  recursive calls                                                                                
+0  db block gets                                                                                    
+28  consistent gets                                                                                 
+9  physical reads                                                                                   
+0  redo size                                                                                        
+445  bytes sent via SQL*Net to client                                                               
+363  bytes received via SQL*Net from client                                                         
+2  SQL*Net roundtrips to/from client                                                                
+0  sorts (memory)                                                                                   
+0  sorts (disk)                                                                                     
+3  rows processed                                                                                   
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno dept_no, max( t1.sal ) max_sal
+  2      from emp t1
+  3      inner join emp t2
+  4      on ( dept_no = t2.deptno and max_sal = t2.sal )
+  5*     group by t1.deptno
+SCOTT@orcl2 >/
+    on ( dept_no = t2.deptno and max_sal = t2.sal )
+                                 *
+ERROR at line 4:
+ORA-00904: "MAX_SAL": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno dept_no, max( t1.sal ) max_sal
+  2      from emp t1
+  3      inner join emp t2
+  4      --on ( dept_no = t2.deptno and max_sal = t2.sal )
+  5      on ( dept_no = 20 )
+  6*     group by t1.deptno
+SCOTT@orcl2 >/
+    on ( dept_no = 20 )
+         *
+ERROR at line 5:
+ORA-00904: "DEPT_NO": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno dept_no, max( t1.sal ) max_sal
+  2      from emp t1
+  3      inner join emp t2
+  4      --on ( t1.dept_no = t2.deptno and t1.max_sal = t2.sal )
+  5      on ( dept_no = 20 )
+  6*     group by t1.deptno
+SCOTT@orcl2 >/
+    on ( dept_no = 20 )
+         *
+ERROR at line 5:
+ORA-00904: "DEPT_NO": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno dept_no, max( t1.sal ) max_sal
+  2      from emp t1
+  3      inner join emp t2
+  4      --on ( t1.dept_no = t2.deptno and t1.max_sal = t2.sal )
+  5      on ( dept_no = 20 )
+  6*     group by t1.deptno
+SCOTT@orcl2 >/
+    on ( dept_no = 20 )
+         *
+ERROR at line 5:
+ORA-00904: "DEPT_NO": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno dept_no, max( t1.sal ) max_sal
+  2      from emp t1
+  3      inner join emp t2
+  4      --on ( t1.dept_no = t2.deptno and t1.max_sal = t2.sal )
+  5      on ( t1.dept_no = 20 )
+  6*     group by t1.deptno
+SCOTT@orcl2 >/
+    on ( t1.dept_no = 20 )
+         *
+ERROR at line 5:
+ORA-00904: "T1"."DEPT_NO": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.deptno dept_no, max( t1.sal ) max_sal
+  2      from emp t1
+  3      inner join emp t2
+  4      --on ( t1.dept_no = t2.deptno and t1.max_sal = t2.sal )
+  5      on ( t1.dept_no = 20 )
+  6      group by t1.deptno
+  7  select t1.empno t1.ename, t1.deptno
+  8      from emp t1
+  9      inner join (
+ 10              select t2.deptno, max( t2.sal ) max_sal
+ 11              from emp t2
+ 12              group by t2.deptno )
+ 13*     on ( t1.deptno = t2.deptno and t1.sal = t2.max_sal )
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.empno t1.ename, t1.deptno
+  2      from emp t1
+  3      inner join (
+  4              select t2.deptno, max( t2.sal ) max_sal
+  5              from emp t2
+  6              group by t2.deptno )
+  7*     on ( t1.deptno = t2.deptno and t1.sal = t2.max_sal )
+SCOTT@orcl2 >/
+select t1.empno t1.ename, t1.deptno
+                  *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.empno, t1.ename, t1.deptno
+  2      from emp t1
+  3      inner join (
+  4              select t2.deptno, max( t2.sal ) max_sal
+  5              from emp t2
+  6              group by t2.deptno )
+  7*     on ( t1.deptno = t2.deptno and t1.sal = t2.max_sal )
+SCOTT@orcl2 >/
+    on ( t1.deptno = t2.deptno and t1.sal = t2.max_sal )
+                                            *
+ERROR at line 7:
+ORA-00904: "T2"."MAX_SAL": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.empno, t1.ename, t1.deptno
+  2      from emp t1
+  3      inner join (
+  4              select t2.deptno, max( t2.sal ) max_sal
+  5              from emp t2
+  6              group by t2.deptno )
+  7*     on ( t1.deptno = t2.deptno and t1.sal = max_sal )
+SCOTT@orcl2 >/
+    on ( t1.deptno = t2.deptno and t1.sal = max_sal )
+                     *
+ERROR at line 7:
+ORA-00904: "T2"."DEPTNO": invalid identifier 
+
+
+SCOTT@orcl2 >ed
+Wrote file afiedt.buf
+
+  1  select t1.empno, t1.ename, t1.deptno
+  2      from emp t1
+  3      inner join (
+  4              select t2.deptno, max( t2.sal ) max_sal
+  5              from emp t2
+  6              group by t2.de

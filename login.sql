@@ -1,6 +1,7 @@
 -- set pagesize 30;
 -- spool spool.log app;
-spool "d:\git\db\spool.log" app;
+--spool "d:\git\db\spool.log" app;
+spool "spool.log" app;
 set linesize 100;
 set pause on;
 set trim on;
@@ -10,7 +11,7 @@ set sqlprompt "_USER'@'_CONNECT_IDENTIFIER > "
 -- set echo on;
 
 define _EDITOR = vi;
-DEFINE _EDITOR         = "C:\Program Files (x86)\Vim\vim81\gvim.exe"(CHAR) ;
+--DEFINE _EDITOR         = "C:\Program Files (x86)\Vim\vim81\gvim.exe"(CHAR) ;
 set SQLPROMPT "_USER'@'_CONNECT_IDENTIFIER >";
 
 col name format a10;

@@ -5,3 +5,4 @@ spool.log
 spool.log
 orcl_scott.dmp
 orcl_scott.dmp
+*.dmp

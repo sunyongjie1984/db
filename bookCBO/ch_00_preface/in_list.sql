@@ -30,7 +30,8 @@ rem
 rem	See the Chapter 3 "Basic Selectivity" for more details
 rem
 
-start setenv
+rem start setenv
+start D:\git\db\bookCBO\ch_00_preface\setenv
 
 drop table t1;
 

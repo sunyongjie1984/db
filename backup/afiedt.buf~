@@ -1,4 +1,0 @@
-select sql_id, child_number
-from v$sql
-where sql_text like 'select t1.ename%'/
-/

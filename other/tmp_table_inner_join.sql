@@ -1,4 +1,4 @@
-select t1.empno, t1.ename, t1.deptno
+select t1.empno, t1.ename, t1.sal, t1.deptno
     from emp t1
     inner join (
         select t2.deptno, max( t2.sal ) max_sal

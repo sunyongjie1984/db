@@ -1,6 +1,7 @@
 
 sqlOptimize/1_2_4.~sql
 spool.log
+spool.log
 .DS_Store
 spool.log
 *.dmp

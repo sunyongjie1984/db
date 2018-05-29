@@ -11,7 +11,7 @@ echo %dt%
 
 set filename=local_orcl_scott_%dt%.dmp
 echo %filename%
-exp scott/tiger@orcl file=%filename%
+#exp scott/tiger@orcl file=%filename%
 
 
 

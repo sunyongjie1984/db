@@ -3,14 +3,10 @@ sqlOptimize/1_2_4.~sql
 spool.log
 .DS_Store
 spool.log
-orcl_scott.dmp
-orcl_scott.dmp
 *.dmp
 
 afiedt.buf
 
 *.swp
-
-*.log
 
 *.log

@@ -1,5 +1,4 @@
 -- set pagesize 30;
--- spool spool.log app;
 --spool "d:\git\db\spool.log" app;
 spool "spool.log" app;
 set linesize 100;

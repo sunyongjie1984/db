@@ -2,7 +2,7 @@
 --spool "d:\git\db\spool.log" app;
 spool "spool.log" app;
 set linesize 100;
-set pause on;
+-- set pause on;
 set trim on;
 
 set serveroutput on;

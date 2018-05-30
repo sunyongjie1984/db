@@ -1,9 +1,9 @@
 
-会话已更改。
+Session altered.
 
 db_file_multiblock_read_count = 4
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 3724264953
 
@@ -20,11 +20,11 @@ Note
    - cpu costing is off (consider enabling it)
 
 
-会话已更改。
+Session altered.
 
 db_file_multiblock_read_count = 8
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 3724264953
 
@@ -41,11 +41,11 @@ Note
    - cpu costing is off (consider enabling it)
 
 
-会话已更改。
+Session altered.
 
 db_file_multiblock_read_count = 16
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 3724264953
 
@@ -62,11 +62,11 @@ Note
    - cpu costing is off (consider enabling it)
 
 
-会话已更改。
+Session altered.
 
 db_file_multiblock_read_count = 32
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 3724264953
 
@@ -83,11 +83,11 @@ Note
    - cpu costing is off (consider enabling it)
 
 
-会话已更改。
+Session altered.
 
 db_file_multiblock_read_count = 64
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 3724264953
 
@@ -104,11 +104,11 @@ Note
    - cpu costing is off (consider enabling it)
 
 
-会话已更改。
+Session altered.
 
 db_file_multiblock_read_count = 128
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 3724264953
 
@@ -125,18 +125,18 @@ Note
    - cpu costing is off (consider enabling it)
 
 
-会话已更改。
+Session altered.
 
 
-执行计划
+Execution Plan
 ----------------------------------------------------------
 Plan hash value: 136660032
 
 -----------------------------------------------------------
 | Id  | Operation          | Name | Rows  | Bytes | Cost  |
 -----------------------------------------------------------
-|   0 | SELECT STATEMENT   |      |   582 |  2328 |  1565 |
-|   1 |  HASH GROUP BY     |      |   582 |  2328 |  1565 |
+|   0 | SELECT STATEMENT   |      |   582 |  2328 |  1597 |
+|   1 |  HASH GROUP BY     |      |   582 |  2328 |  1597 |
 |   2 |   TABLE ACCESS FULL| T1   | 10000 | 40000 |  1541 |
 -----------------------------------------------------------
 

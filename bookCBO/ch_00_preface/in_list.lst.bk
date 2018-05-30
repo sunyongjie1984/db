@@ -1,0 +1,21 @@
+
+Execution Plan
+----------------------------------------------------------                                          
+Plan hash value: 3617692013                                                                         
+                                                                                                    
+----------------------------------------------------------                                          
+| Id  | Operation         | Name | Rows  | Bytes | Cost  |                                          
+----------------------------------------------------------                                          
+|   0 | SELECT STATEMENT  |      |   200 | 20800 |     5 |                                          
+|*  1 |  TABLE ACCESS FULL| T1   |   200 | 20800 |     5 |                                          
+----------------------------------------------------------                                          
+                                                                                                    
+Predicate Information (identified by operation id):                                                 
+---------------------------------------------------                                                 
+                                                                                                    
+   1 - filter("N1"=1 OR "N1"=2)                                                                     
+                                                                                                    
+Note                                                                                                
+-----                                                                                               
+   - cpu costing is off (consider enabling it)                                                      
+

@@ -1,0 +1,30 @@
+
+PL/SQL 过程已成功完成。
+
+
+表已删除。
+
+
+PL/SQL 过程已成功完成。
+
+
+PL/SQL 过程已成功完成。
+
+
+系统已更改。
+
+tablespace test_8k
+           *
+第 6 行出现错误:
+ORA-00959: 表空间 'TEST_8K' 不存在
+
+
+begin
+*
+第 1 行出现错误:
+ORA-20000: Unable to analyze TABLE "SCOTT"."T1", insufficient privileges or does not exist
+ORA-06512: 在 "SYS.DBMS_STATS", line 20327
+ORA-06512: 在 "SYS.DBMS_STATS", line 20360
+ORA-06512: 在 line 2
+
+

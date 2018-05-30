@@ -1,0 +1,60 @@
+
+会话已更改。
+
+db_file_multiblock_read_count = 4
+from	t1
+    	*
+第 2 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+
+会话已更改。
+
+db_file_multiblock_read_count = 8
+from	t1
+    	*
+第 2 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+
+会话已更改。
+
+db_file_multiblock_read_count = 16
+from	t1
+    	*
+第 2 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+
+会话已更改。
+
+db_file_multiblock_read_count = 32
+from	t1
+    	*
+第 2 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+
+会话已更改。
+
+db_file_multiblock_read_count = 64
+from	t1
+    	*
+第 2 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+
+会话已更改。
+
+db_file_multiblock_read_count = 128
+from	t1
+    	*
+第 2 行出现错误:
+ORA-00942: 表或视图不存在
+
+

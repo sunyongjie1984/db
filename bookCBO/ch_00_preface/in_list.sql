@@ -74,8 +74,8 @@ begin
 end;
 /
 
--- set autotrace traceonly explain
-set autotrace on
+set autotrace traceonly explain
+-- set autotrace on
 
 
 spool in_list

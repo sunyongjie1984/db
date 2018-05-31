@@ -1,0 +1,63 @@
+
+COLUMN_NAME          NUM_DISTINCT  NUM_NULLS    DENSITY        LOW       HIGH
+-------------------- ------------ ---------- ---------- ---------- ----------
+MONTH_NO                       12          0 .083333333          1         12
+
+已选择 1 行。
+
+
+COLUMN_NAME          ENDPOINT_NUMBER ENDPOINT_VALUE
+-------------------- --------------- --------------
+MONTH_NO                           0              1
+MONTH_NO                           1             12
+
+已选择2行。
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   100 |   300 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=12)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+Now use hack_stats.sql to change distinct or density
+
+系统已更改。
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   100 |   300 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=12)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+

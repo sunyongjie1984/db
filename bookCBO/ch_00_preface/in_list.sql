@@ -80,7 +80,7 @@ set autotrace on
 
 spool in_list
 
-select n1, rtrim(padding)
+select n1, rtrim(padding) padding
 from   t1
 where
    n1 in (1,2)

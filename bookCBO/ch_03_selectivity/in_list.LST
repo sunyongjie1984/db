@@ -1,0 +1,336 @@
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   200 |   600 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   300 |   900 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   400 |  1200 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   500 |  1500 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   600 |  1800 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   700 |  2100 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   800 |  2400 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |   900 |  2700 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |  1000 |  3000 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9 OR "MONTH_NO"=10)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |  1100 |  3300 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9 OR "MONTH_NO"=10 OR "MONTH_NO"=11)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |  1200 |  3600 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9 OR "MONTH_NO"=10 OR "MONTH_NO"=11 OR
+              "MONTH_NO"=12)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |  1200 |  3600 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9 OR "MONTH_NO"=10 OR "MONTH_NO"=11 OR
+              "MONTH_NO"=12 OR "MONTH_NO"=13)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |  1200 |  3600 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9 OR "MONTH_NO"=10 OR "MONTH_NO"=11 OR
+              "MONTH_NO"=12 OR "MONTH_NO"=13 OR "MONTH_NO"=14)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+
+
+执行计划
+----------------------------------------------------------
+Plan hash value: 3337892515
+
+---------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost  |
+---------------------------------------------------------------
+|   0 | SELECT STATEMENT   |          |     1 |     3 |     2 |
+|   1 |  SORT AGGREGATE    |          |     1 |     3 |       |
+|*  2 |   TABLE ACCESS FULL| AUDIENCE |  1200 |  3600 |     2 |
+---------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - filter("MONTH_NO"=1 OR "MONTH_NO"=2 OR "MONTH_NO"=3 OR
+              "MONTH_NO"=4 OR "MONTH_NO"=5 OR "MONTH_NO"=6 OR "MONTH_NO"=7 OR
+              "MONTH_NO"=8 OR "MONTH_NO"=9 OR "MONTH_NO"=10 OR "MONTH_NO"=11 OR
+              "MONTH_NO"=12 OR "MONTH_NO"=13 OR "MONTH_NO"=14 OR "MONTH_NO"=15 OR
+              "MONTH_NO"=16 OR "MONTH_NO"=17 OR "MONTH_NO"=18 OR "MONTH_NO"=19 OR
+              "MONTH_NO"=20 OR "MONTH_NO"=21 OR "MONTH_NO"=22 OR "MONTH_NO"=23 OR
+              "MONTH_NO"=24 OR "MONTH_NO"=25 OR "MONTH_NO"=26 OR "MONTH_NO"=27 OR
+              "MONTH_NO"=28 OR "MONTH_NO"=29 OR "MONTH_NO"=30)
+
+Note
+-----
+   - cpu costing is off (consider enabling it)
+

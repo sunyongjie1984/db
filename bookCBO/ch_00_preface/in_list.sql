@@ -74,17 +74,24 @@ begin
 end;
 /
 
-set autotrace traceonly explain
+-- set autotrace traceonly explain
+set autotrace on
 
 
 spool in_list
 
-select 
-	* 
-from	t1
+select n1, rtrim(padding)
+from   t1
 where
-	n1 in (1,2)
+   n1 in (1,2)
 ;
+
+rem select 
+rem 	* 
+rem from	t1
+rem where
+rem 	n1 in (1,2)
+rem ;*/
 
 
 set autotrace off

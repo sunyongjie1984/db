@@ -16,6 +16,7 @@ set SQLPROMPT "_USER'@'_CONNECT_IDENTIFIER >";
 col name format a10;
 col Name format a10;
 col cname format a20;
+col padding format a20;
 col ccontact format a20;
 col sname format a20;
 col prod_name format a25;

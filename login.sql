@@ -60,4 +60,4 @@ col mobilephone format a20;
 col mobilephone format a20;
 col PROD_DESC format a30;
 col productsName format a30;
-set autotrace on;
+-- set autotrace on;

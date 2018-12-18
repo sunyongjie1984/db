@@ -1,211 +1,222 @@
 /*
-Ω≠À’ °÷ÿµ„ŒÔ¡˜∆Û“µ‘À––«Èøˆº‡øÿ£®‘¬±®£© ul_JSSZDWLQYYXQKJK_YB_  IJSYB_XXB1
-Ω≠À’≤÷¥¢÷∏ ˝µ˜≤È£®‘¬±®£©               ul_JSCCZSDC_YB_         IJSYB_XXB
-π´¬∑ŒÔ¡˜‘Àº€≤…ºØ±Ì£®‘¬±®£©             ul_GLWLYJCJB_YB_        IGLYB_XXB
-Ω≠À’≤÷ø‚º€∏Ò÷∏ ˝µ˜≤È£®‘¬±®£©           ul_JSCKJGZSDC_YB_       IJSYB_XXB2
-ŒÔ¡˜∆Û“µæ≠”™«Èøˆ£®ºæ±®£©               ul_WLQYJYQK_JB_         IWLJB_XXB
-∆Û“µŒÔ¡˜◊¥øˆ£®ƒÍ±®£©                   ul_QYWLZK_NB_           IQYNB_XXB
-ŒÔ¡˜∆Û“µæ≠”™«Èøˆ£®ƒÍ±®£©               ul_WLQYJYQK_NB_         IWLNB_XXB
+Ê±üËãèÁúÅÈáçÁÇπÁâ©ÊµÅ‰ºÅ‰∏öËøêË°åÊÉÖÂÜµÁõëÊéßÔºàÊúàÊä•Ôºâ ul_JSSZDWLQYYXQKJK_YB_  IJSYB_XXB1
+Ê±üËãè‰ªìÂÇ®ÊåáÊï∞Ë∞ÉÊü•ÔºàÊúàÊä•Ôºâ               ul_JSCCZSDC_YB_         IJSYB_XXB
+ÂÖ¨Ë∑ØÁâ©ÊµÅËøê‰ª∑ÈááÈõÜË°®ÔºàÊúàÊä•Ôºâ             ul_GLWLYJCJB_YB_        IGLYB_XXB
+Ê±üËãè‰ªìÂ∫ì‰ª∑Ê†ºÊåáÊï∞Ë∞ÉÊü•ÔºàÊúàÊä•Ôºâ           ul_JSCKJGZSDC_YB_       IJSYB_XXB2
+Áâ©ÊµÅ‰ºÅ‰∏öÁªèËê•ÊÉÖÂÜµÔºàÂ≠£Êä•Ôºâ               ul_WLQYJYQK_JB_         IWLJB_XXB
+‰ºÅ‰∏öÁâ©ÊµÅÁä∂ÂÜµÔºàÂπ¥Êä•Ôºâ                   ul_QYWLZK_NB_           IQYNB_XXB
+Áâ©ÊµÅ‰ºÅ‰∏öÁªèËê•ÊÉÖÂÜµÔºàÂπ¥Êä•Ôºâ               ul_WLQYJYQK_NB_         IWLNB_XXB
 
 */
 create view v_wlzb_tj as 
-select distinct jb.bbmc,
-                jb.bblx,
-                jb.bbq,
-                jb.dq,
-                count(nvl(jb.dq, 'Ω≠À’ °')) over(partition by jb.dq) ybs,
+SELECT DISTINCT JB.BBMC,
+                JB.BBLX,
+                JB.BBQ,
+                JB.DQ,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) YBS,
                 --(select count(*) from ul_JSSZDWLQYYXQKJK_YB_ where btype = 0) ybs,
-                sum(case
-                      when jb.spzt = '10' then
+                SUM(CASE
+                      WHEN JB.SPZT = '10' THEN
                        1
-                      when jb.spzt = '20' then
+                      WHEN JB.SPZT = '20' THEN
                        1
-                      when jb.spzt = '30' then
+                      WHEN JB.SPZT = '30' THEN
                        1
-                      when jb.spzt = '40' then
+                      WHEN JB.SPZT = '40' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_dsp,
-                sum(case
-                      when jb.spzt = '60' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_DSP,
+                SUM(CASE
+                      WHEN JB.SPZT = '60' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_sptg,
-                sum(case
-                      when jb.spzt = '50' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPTG,
+                SUM(CASE
+                      WHEN JB.SPZT = '50' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_spbtg
-  from (SELECT 'Ω≠À’ °÷ÿµ„ŒÔ¡˜∆Û“µ‘À––«Èøˆº‡øÿ' bbmc,
-               y.username qymc,
-               '‘¬±®' bblx,
-               x.sf sf,
-               x.sh || x.x dq,
-               case
-                 when x1.a7 is null and x1.username_ is not null then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPBTG,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) - COUNT(JB.TBQY) OVER(PARTITION BY JB.BBQ) WSB
+  FROM (SELECT 'Ê±üËãèÁúÅÈáçÁÇπÁâ©ÊµÅ‰ºÅ‰∏öËøêË°åÊÉÖÂÜµÁõëÊéß' BBMC,
+               Y.USERNAME QYMC,
+               'ÊúàÊä•' BBLX,
+               X.SF SF,
+               X.SH || X.X DQ,
+               CASE
+                 WHEN X1.A7 IS NULL AND X1.USERNAME_ IS NOT NULL THEN
                   '10'
-                 else
-                  x1.a7
-               end spzt,
-               x1.username_ tbqy,
-               x1.bbq_ bbq
-          FROM ul_JSSZDWLQYYXQKJK_YB_ y
-          LEFT JOIN bizuser.zwxt_qyjbxx x
-            ON x.qydm = y.userid
-          LEFT JOIN IJSYB_XXB1 x1
-            ON x1.userid_ = y.userid
-         WHERE y.btype = 0) jb
-union all
-select distinct jb.bbmc,
-                jb.bblx,
-                jb.bbq,
-                jb.dq,
-                count(nvl(jb.dq, 'Ω≠À’ °')) over(partition by jb.dq) ybs,
+                 ELSE
+                  X1.A7
+               END SPZT,
+               X1.USERNAME_ TBQY,
+               X1.BBQ_ BBQ
+          FROM UL_JSSZDWLQYYXQKJK_YB_ Y
+          LEFT JOIN BIZUSER.ZWXT_QYJBXX X
+            ON X.QYDM = Y.USERID
+          LEFT JOIN GT.E_UROP_JG J
+            ON X.ZGLSJDM = J.NBBM
+          LEFT JOIN IJSYB_XXB1 X1
+            ON X1.USERID_ = Y.USERID
+         WHERE Y.BTYPE = 0) JB
+UNION ALL
+SELECT DISTINCT JB.BBMC,
+                JB.BBLX,
+                JB.BBQ,
+                JB.DQ,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) YBS,
                 --(select count(*) from ul_JSSZDWLQYYXQKJK_YB_ where btype = 0) ybs,
-                sum(case
-                      when jb.spzt = '10' then
+                SUM(CASE
+                      WHEN JB.SPZT = '10' THEN
                        1
-                      when jb.spzt = '20' then
+                      WHEN JB.SPZT = '20' THEN
                        1
-                      when jb.spzt = '30' then
+                      WHEN JB.SPZT = '30' THEN
                        1
-                      when jb.spzt = '40' then
+                      WHEN JB.SPZT = '40' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_dsp,
-                sum(case
-                      when jb.spzt = '60' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_DSP,
+                SUM(CASE
+                      WHEN JB.SPZT = '60' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_sptg,
-                sum(case
-                      when jb.spzt = '50' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPTG,
+                SUM(CASE
+                      WHEN JB.SPZT = '50' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_spbtg
-  from (SELECT 'Ω≠À’≤÷¥¢÷∏ ˝µ˜≤È' bbmc,
-               y.username qymc,
-               '‘¬±®' bblx,
-               x.sf sf,
-               x.sh || x.x dq,
-               case
-                 when x1.a7 is null and x1.username_ is not null then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPBTG,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) - COUNT(JB.TBQY) OVER(PARTITION BY JB.BBQ) WSB
+  FROM (SELECT 'Ê±üËãè‰ªìÂÇ®ÊåáÊï∞Ë∞ÉÊü•' BBMC,
+               Y.USERNAME QYMC,
+               'ÊúàÊä•' BBLX,
+               X.SF SF,
+               X.SH || X.X DQ,
+               CASE
+                 WHEN X1.A7 IS NULL AND X1.USERNAME_ IS NOT NULL THEN
                   '10'
-                 else
-                  x1.a7
-               end spzt,
-               x1.username_ tbqy,
-               x1.bbq_ bbq
-          FROM ul_JSCCZSDC_YB_ y
-          LEFT JOIN bizuser.zwxt_qyjbxx x
-            ON x.qydm = y.userid
-          LEFT JOIN IJSYB_XXB x1
-            ON x1.userid_ = y.userid
-         WHERE y.btype = 0) jb
-union all
-select distinct jb.bbmc,
-                jb.bblx,
-                jb.bbq,
-                jb.dq,
-                count(nvl(jb.dq, 'Ω≠À’ °')) over(partition by jb.dq) ybs,
+                 ELSE
+                  X1.A7
+               END SPZT,
+               X1.USERNAME_ TBQY,
+               X1.BBQ_ BBQ
+          FROM UL_JSCCZSDC_YB_ Y
+          LEFT JOIN BIZUSER.ZWXT_QYJBXX X
+            ON X.QYDM = Y.USERID
+          LEFT JOIN GT.E_UROP_JG J
+            ON X.ZGLSJDM = J.NBBM
+          LEFT JOIN IJSYB_XXB X1
+            ON X1.USERID_ = Y.USERID
+         WHERE Y.BTYPE = 0) JB
+UNION ALL
+SELECT DISTINCT JB.BBMC,
+                JB.BBLX,
+                JB.BBQ,
+                JB.DQ,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) YBS,
                 --(select count(*) from ul_JSSZDWLQYYXQKJK_YB_ where btype = 0) ybs,
-                sum(case
-                      when jb.spzt = '10' then
+                SUM(CASE
+                      WHEN JB.SPZT = '10' THEN
                        1
-                      when jb.spzt = '20' then
+                      WHEN JB.SPZT = '20' THEN
                        1
-                      when jb.spzt = '30' then
+                      WHEN JB.SPZT = '30' THEN
                        1
-                      when jb.spzt = '40' then
+                      WHEN JB.SPZT = '40' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_dsp,
-                sum(case
-                      when jb.spzt = '60' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_DSP,
+                SUM(CASE
+                      WHEN JB.SPZT = '60' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_sptg,
-                sum(case
-                      when jb.spzt = '50' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPTG,
+                SUM(CASE
+                      WHEN JB.SPZT = '50' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_spbtg
-  from (SELECT 'π´¬∑ŒÔ¡˜‘Àº€≤…ºØ±Ì' bbmc,
-               y.username qymc,
-               '‘¬±®' bblx,
-               x.sf sf,
-               x.sh || x.x dq,
-               case
-                 when x1.a7 is null and x1.username_ is not null then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPBTG,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) - COUNT(JB.TBQY) OVER(PARTITION BY JB.BBQ) WSB
+  FROM (SELECT 'ÂÖ¨Ë∑ØÁâ©ÊµÅËøê‰ª∑ÈááÈõÜË°®' BBMC,
+               Y.USERNAME QYMC,
+               'ÊúàÊä•' BBLX,
+               X.SF SF,
+               X.SH || X.X DQ,
+               CASE
+                 WHEN X1.A7 IS NULL AND X1.USERNAME_ IS NOT NULL THEN
                   '10'
-                 else
-                  x1.a7
-               end spzt,
-               x1.username_ tbqy,
-               x1.bbq_ bbq
-          FROM ul_GLWLYJCJB_YB_ y
-          LEFT JOIN bizuser.zwxt_qyjbxx x
-            ON x.qydm = y.userid
-          LEFT JOIN IGLYB_XXB x1
-            ON x1.userid_ = y.userid
-         WHERE y.btype = 0) jb
-union all
-select distinct jb.bbmc,
-                jb.bblx,
-                jb.bbq,
-                jb.dq,
-                count(nvl(jb.dq, 'Ω≠À’ °')) over(partition by jb.dq) ybs,
+                 ELSE
+                  X1.A7
+               END SPZT,
+               X1.USERNAME_ TBQY,
+               X1.BBQ_ BBQ
+          FROM UL_GLWLYJCJB_YB_ Y
+          LEFT JOIN BIZUSER.ZWXT_QYJBXX X
+            ON X.QYDM = Y.USERID
+          LEFT JOIN GT.E_UROP_JG J
+            ON X.ZGLSJDM = J.NBBM
+          LEFT JOIN IGLYB_XXB X1
+            ON X1.USERID_ = Y.USERID
+         WHERE Y.BTYPE = 0) JB
+UNION ALL
+SELECT DISTINCT JB.BBMC,
+                JB.BBLX,
+                JB.BBQ,
+                JB.DQ,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) YBS,
                 --(select count(*) from ul_JSSZDWLQYYXQKJK_YB_ where btype = 0) ybs,
-                sum(case
-                      when jb.spzt = '10' then
+                SUM(CASE
+                      WHEN JB.SPZT = '10' THEN
                        1
-                      when jb.spzt = '20' then
+                      WHEN JB.SPZT = '20' THEN
                        1
-                      when jb.spzt = '30' then
+                      WHEN JB.SPZT = '30' THEN
                        1
-                      when jb.spzt = '40' then
+                      WHEN JB.SPZT = '40' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_dsp,
-                sum(case
-                      when jb.spzt = '60' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_DSP,
+                SUM(CASE
+                      WHEN JB.SPZT = '60' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_sptg,
-                sum(case
-                      when jb.spzt = '50' then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPTG,
+                SUM(CASE
+                      WHEN JB.SPZT = '50' THEN
                        1
-                      else
+                      ELSE
                        0
-                    end) over(partition by jb.bbq) ybs_spbtg
-  from (SELECT 'Ω≠À’≤÷ø‚º€∏Ò÷∏ ˝µ˜≤È' bbmc,
-               y.username qymc,
-               '‘¬±®' bblx,
-               x.sf sf,
-               x.sh || x.x dq,
-               case
-                 when x1.a7 is null and x1.username_ is not null then
+                    END) OVER(PARTITION BY JB.BBQ) YBS_SPBTG,
+                COUNT(NVL(JB.DQ, 'Ê±üËãèÁúÅ')) OVER(PARTITION BY JB.DQ) - COUNT(JB.TBQY) OVER(PARTITION BY JB.BBQ) WSB
+  FROM (SELECT 'Ê±üËãè‰ªìÂ∫ì‰ª∑Ê†ºÊåáÊï∞Ë∞ÉÊü•' BBMC,
+               Y.USERNAME QYMC,
+               'ÊúàÊä•' BBLX,
+               X.SF SF,
+               X.SH || X.X DQ,
+               CASE
+                 WHEN X1.A7 IS NULL AND X1.USERNAME_ IS NOT NULL THEN
                   '10'
-                 else
-                  x1.a7
-               end spzt,
-               x1.username_ tbqy,
-               x1.bbq_ bbq
-          FROM ul_JSCKJGZSDC_YB_ y
-          LEFT JOIN bizuser.zwxt_qyjbxx x
-            ON x.qydm = y.userid
-          LEFT JOIN IJSYB_XXB2 x1
-            ON x1.userid_ = y.userid
-         WHERE y.btype = 0) jb;
- 
+                 ELSE
+                  X1.A7
+               END SPZT,
+               X1.USERNAME_ TBQY,
+               X1.BBQ_ BBQ
+          FROM UL_JSCKJGZSDC_YB_ Y
+          LEFT JOIN BIZUSER.ZWXT_QYJBXX X
+            ON X.QYDM = Y.USERID
+          LEFT JOIN GT.E_UROP_JG J
+            ON X.ZGLSJDM = J.NBBM
+          LEFT JOIN IJSYB_XXB2 X1
+            ON X1.USERID_ = Y.USERID
+         WHERE Y.BTYPE = 0) JB;

@@ -1,0 +1,9 @@
+--恢复表数据到某一个时刻
+SELECT ROW_MOVEMENT
+  FROM USER_TABLES
+ WHERE LOWER(TABLE_NAME) = 'zwxt_chy_wzmsxx';
+
+ALTER TABLE ZWXT_CHY_WZMSXX ENABLE ROW MOVEMENT;
+
+FLASHBACK TABLE BIZUSER.ZWXT_CHY_WZMSXX TO TIMESTAMP TO_TIMESTAMP('2018-12-26 16:00:00',
+                                                                  'yyyy-mm-dd HH24:MI:SS');
